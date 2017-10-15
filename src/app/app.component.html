@@ -1,20 +1,85 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-sidenav-container fullscreen class="main-container">
 
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon aria-label="Toggle menu">menu</mat-icon>
+    </button>
+    <span>Aronium</span>
+  </mat-toolbar>
+
+  <mat-sidenav #sidenav mode="side" opened="true" class="sidenav">
+    <h2>Aronium</h2>
+    <button type="button" mat-button (click)="sidenav.close()">Hide</button>
+  </mat-sidenav>
+
+  <div class="container">
+
+    <section>
+      <mat-checkbox>Checkbox</mat-checkbox>
+    </section>
+
+    <section>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Favorite food">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </form>
+    </section>
+
+    <section>
+      <mat-slide-toggle color="primary">Slide me!</mat-slide-toggle>
+    </section>
+
+    <section>
+      <h3>Basic Buttons</h3>
+      <div class="button-row">
+        <button mat-button>Basic</button>
+        <button mat-button color="primary">Primary</button>
+        <button mat-button color="accent">Accent</button>
+        <button mat-button color="warn">Warn</button>
+        <button mat-button disabled>Disabled</button>
+        <a mat-button routerLink=".">Link</a>
+      </div>
+
+      <h3>Raised Buttons</h3>
+      <div class="button-row">
+        <button mat-raised-button>Basic</button>
+        <button mat-raised-button color="primary">Primary</button>
+        <button mat-raised-button color="accent">Accent</button>
+        <button mat-raised-button color="warn">Warn</button>
+        <button mat-raised-button disabled>Disabled</button>
+        <a mat-raised-button routerLink=".">Link</a>
+      </div>
+    </section>
+
+    <section>
+      <button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </section>
+
+    <section>
+      <mat-card>
+        <mat-card-title>Card title</mat-card-title>
+        <mat-card-subtitle>Card subtitle</mat-card-subtitle>
+        <mat-card-content> Primary card content. Intended for blocks of text</mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button>Action button</button>
+        </mat-card-actions>
+      </mat-card>
+    </section>
+
+    <section>
+      <button mat-button (click)="openDialog()">Dialog</button>
+    </section>
+
+  </div>
+
+</mat-sidenav-container>

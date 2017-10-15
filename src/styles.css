@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+.container{
+    /* background-color: white; */
+    padding: 10px 28px;
+}
+
+.sidenav{
+    padding: 10px;
+    min-width: 250px!important;
+}
+
+h1, h2, h3{
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+section{
+    margin-bottom: 20px;
+}
+
+.fill {
+    flex: 1 1 auto;
+}

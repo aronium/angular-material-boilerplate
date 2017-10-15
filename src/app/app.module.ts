@@ -1,16 +1,48 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, 
+  MatCheckboxModule, 
+  MatToolbarModule,
+  MatMenuModule, 
+  MatSidenavModule, 
+  MatFormFieldModule, 
+  MatInputModule, 
+  MatIconModule, 
+  MatSlideToggleModule, 
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatCardModule, 
+  MatDialogModule } from '@angular/material';
+
 import { AppComponent } from './app.component';
+import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExampleDialogComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatSlideToggleModule,
+    MatCardModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ExampleDialogComponent]
 })
 export class AppModule { }

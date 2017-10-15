@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Hi</h1>
+<div mat-dialog-content>
+  <p>What's your favorite something?</p>
+  <mat-form-field>
+    <input matInput tabindex="1">
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="true" tabindex="2">Yes</button>
+  <button mat-button tabindex="-1" (click)="onNoClick()">No</button>
+</div>
