@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, 
+import { 
+  MatButtonModule, 
   MatCheckboxModule, 
   MatToolbarModule,
   MatMenuModule, 
@@ -16,6 +17,7 @@ import { MatButtonModule,
   MatNativeDateModule,
   MatSelectModule,
   MatRadioModule,
+  MatGridListModule,
   MatListModule,
   MatCardModule, 
   MatDialogModule } from '@angular/material';
@@ -26,6 +28,8 @@ import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
 import { DevicesComponent } from './components/devices/devices.component';
+import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
+import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
   {
@@ -38,16 +42,16 @@ const appRoutes: Routes = [
           { path: 'devices', component: DevicesComponent },
       ]
   },
-  // {
-  //     path: '',
-  //     component: LoginLayoutComponent,
-  //     children: [
-  //         {
-  //             path: 'login',
-  //             component: LoginComponent
-  //         }
-  //     ]
-  // },
+  {
+      path: '',
+      component: LoginLayoutComponent,
+      children: [
+          {
+              path: 'login',
+              component: LoginComponent
+          }
+      ]
+  },
   { path: '**', redirectTo: '/home' }
 
 ];
@@ -59,7 +63,9 @@ const appRoutes: Routes = [
     HomeComponent,
     MainLayoutComponent,
     NavBarComponent,
-    DevicesComponent
+    DevicesComponent,
+    LoginLayoutComponent,
+    LoginComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -80,7 +86,8 @@ const appRoutes: Routes = [
     MatNativeDateModule,
     MatSelectModule,
     MatRadioModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

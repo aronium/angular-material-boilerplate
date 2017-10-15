@@ -5,6 +5,14 @@
       <mat-icon aria-label="Toggle menu">menu</mat-icon>
     </button>
     <span>Material Boilerplate</span>
+    <span class="fill"></span>
+    <button class="profile-menu-button" mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon aria-label="Menu">more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item routerLink="/login">Logout</button>
+    </mat-menu>
   </mat-toolbar>
 
   <mat-sidenav #sidenav [mode]="sideNavMode" [opened]="isSideNavOpen">

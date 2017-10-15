@@ -1,5 +1,5 @@
 .sidenav {
-    min-width: 250px !important;
+    min-width: 200px !important;
 
     .logo{
       img{
@@ -14,7 +14,9 @@
       }
 
       &.active, &.active:hover, &.active:focus{
-        background-color: rgba(0,0,0,0.1);
+        // background-color: rgba(0,0,0,0.1);
+        background-color: #0288D1;
+        color: #ffffff;
       }
     }
   }

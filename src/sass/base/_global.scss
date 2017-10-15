@@ -9,4 +9,20 @@ section {
 .fill {
   flex: 1 1 auto;
 }
-  
+
+.toolbar-content{
+  color: red;
+}
+
+mat-toolbar{
+  position: fixed;
+  top:0;
+  z-index: 10;
+
+  .profile-menu-button{
+    float: right;
+  }
+}
+main{
+   padding: 80px 16px 16px;         
+}

@@ -8,4 +8,20 @@ $app-default-warn:      mat-palette($mat-red);
 
 $app-default-theme:     mat-dark-theme($app-default, $app-default-accent, $app-default-warn);
 
+$background:            map-get($app-default-theme, background);
+$foreground:            map-get($app-default-theme, foreground);
+
+.theme-background{
+    background-color:   mat-color($background, card);
+    color:              mat-color($foreground, text);
+
+    input {
+        &:-webkit-autofill {
+            box-shadow: 0 0 0px 1000px mat-color($background, card) inset;
+            -webkit-box-shadow: 0 0 0px 1000px mat-color($background, card) inset;
+            -webkit-text-fill-color: mat-color($foreground, text);
+        }
+   } 
+}
+
 @include angular-material-theme($app-default-theme);
