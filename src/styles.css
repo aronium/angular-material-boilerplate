@@ -1,23 +1,7 @@
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+/*
+Dark theme: pink-bluegrey.css
+Light theme: indigo-pink.css
+*/
 
-.container{
-    /* background-color: white; */
-    padding: 10px 28px;
-}
-
-.sidenav{
-    padding: 10px;
-    min-width: 250px!important;
-}
-
-h1, h2, h3{
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-section{
-    margin-bottom: 20px;
-}
-
-.fill {
-    flex: 1 1 auto;
-}
+@import 'sass/main.scss';

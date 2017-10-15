@@ -4,7 +4,7 @@
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon aria-label="Toggle menu">menu</mat-icon>
     </button>
-    <span>Aronium</span>
+    <span>Material Boilerplate</span>
   </mat-toolbar>
 
   <mat-sidenav #sidenav mode="side" opened="true" class="sidenav">
@@ -16,6 +16,10 @@
 
     <section>
       <mat-checkbox>Checkbox</mat-checkbox>
+      <mat-radio-group>
+        <mat-radio-button value="1">Option 1</mat-radio-button>
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+      </mat-radio-group>
     </section>
 
     <section>
@@ -27,6 +31,13 @@
           <input matInput [matDatepicker]="picker" placeholder="Choose a date">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="Favorite food">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{ food.viewValue }}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
       </form>
     </section>

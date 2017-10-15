@@ -13,6 +13,8 @@ import { MatButtonModule,
   MatSlideToggleModule, 
   MatDatepickerModule,
   MatNativeDateModule,
+  MatSelectModule,
+  MatRadioModule,
   MatCardModule, 
   MatDialogModule } from '@angular/material';
 
@@ -39,7 +41,9 @@ import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.
     MatCardModule,
     MatDialogModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSelectModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent],
