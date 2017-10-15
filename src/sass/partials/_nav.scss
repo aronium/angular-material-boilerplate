@@ -1,4 +1,20 @@
 .sidenav {
-    padding: 10px;
     min-width: 250px !important;
+
+    .logo{
+      img{
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+    }
+
+    a{
+      span{
+        margin-left: 10px;
+      }
+
+      &.active, &.active:hover, &.active:focus{
+        background-color: rgba(0,0,0,0.1);
+      }
+    }
   }

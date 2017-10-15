@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, 
@@ -15,18 +16,53 @@ import { MatButtonModule,
   MatNativeDateModule,
   MatSelectModule,
   MatRadioModule,
+  MatListModule,
   MatCardModule, 
   MatDialogModule } from '@angular/material';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './components/app/app.component';
 import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.component';
+import { HomeComponent } from './components/home/home.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
+import { DevicesComponent } from './components/devices/devices.component';
+
+const appRoutes: Routes = [
+  {
+      path: '',
+      component: MainLayoutComponent,
+      // canActivate: [AuthGuard],
+      children: [
+          { path: '', pathMatch: 'full', redirectTo: '/home' },
+          { path: 'home', component: HomeComponent },
+          { path: 'devices', component: DevicesComponent },
+      ]
+  },
+  // {
+  //     path: '',
+  //     component: LoginLayoutComponent,
+  //     children: [
+  //         {
+  //             path: 'login',
+  //             component: LoginComponent
+  //         }
+  //     ]
+  // },
+  { path: '**', redirectTo: '/home' }
+
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExampleDialogComponent
+    ExampleDialogComponent,
+    HomeComponent,
+    MainLayoutComponent,
+    NavBarComponent,
+    DevicesComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
@@ -43,7 +79,8 @@ import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

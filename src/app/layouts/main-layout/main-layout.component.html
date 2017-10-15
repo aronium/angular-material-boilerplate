@@ -1,0 +1,18 @@
+<mat-sidenav-container fullscreen class="main-container">
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon aria-label="Toggle menu">menu</mat-icon>
+    </button>
+    <span>Material Boilerplate</span>
+  </mat-toolbar>
+
+  <mat-sidenav #sidenav [mode]="sideNavMode" [opened]="isSideNavOpen">
+    <app-nav-bar></app-nav-bar>
+  </mat-sidenav>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+</mat-sidenav-container>

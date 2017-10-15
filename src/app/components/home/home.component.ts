@@ -1,15 +1,14 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
-import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.component';
+import { ExampleDialogComponent } from '../../dialogs/example-dialog/example-dialog.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+  selector: 'app-home',
+  templateUrl: './home.component.html'
 })
-export class AppComponent {
-  constructor(public dialog: MatDialog) {
+export class HomeComponent {
 
-  }
+  constructor(public dialog: MatDialog) { }
 
   foods = [
     { value: '0', viewValue: 'Steak' },
@@ -19,7 +18,7 @@ export class AppComponent {
 
   openDialog(): void {
     let dialogRef = this.dialog.open(ExampleDialogComponent, {
-      width: '400px',
+      width: '400px', 
       data: {}
     });
   }
