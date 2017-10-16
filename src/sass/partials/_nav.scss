@@ -16,9 +16,8 @@
       }
 
       &.active, &.active:hover, &.active:focus{
-        // background-color: rgba(0,0,0,0.1);
-        background-color: #0288D1;
-        color: #ffffff;
+        background-color: $sidenav-link-active-background;
+        color: $sidenav-link-active-foreground;
       }
     }
   }
