@@ -35,6 +35,7 @@ import { UserListComponent } from './components/users/list/user-list.component';
 import { ToolbarComponent } from './components/shared/toolbar/toolbar.component';
 
 import { HttpService } from './services';
+import { UserDetailsComponent } from './components/users/details/user-details.component';
 
 const appRoutes: Routes = [
   {
@@ -45,6 +46,8 @@ const appRoutes: Routes = [
           { path: '', pathMatch: 'full', redirectTo: '/home' },
           { path: 'home', component: HomeComponent },
           { path: 'users', component: UserListComponent },
+          { path: 'users/new', component: UserDetailsComponent },
+          { path: 'users/details/:id', component: UserDetailsComponent }
       ]
   },
   {
@@ -72,7 +75,8 @@ const appRoutes: Routes = [
     LoginComponent,
     UserListComponent,
     UserListComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    UserDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

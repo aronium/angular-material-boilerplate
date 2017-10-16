@@ -13,7 +13,7 @@
 // Define theme defaults
 $app-default:           mat-palette($mat-blue);
 $app-default-accent:    mat-palette($mat-light-blue);
-$app-default-warn:      mat-palette($mat-red);
+$app-default-warn:      mat-palette($mat-red, A700);
 
 // Build theme
 $theme:                 mat-dark-theme($app-default, $app-default-accent, $app-default-warn);

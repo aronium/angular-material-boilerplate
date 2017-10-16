@@ -1,6 +1,16 @@
-<table class="table-bordered">
+<button mat-raised-button>
+  <mat-icon>cached</mat-icon>
+</button>
+<button mat-raised-button routerLink="/users/new">
+  <mat-icon>add</mat-icon>
+</button>
+<button mat-raised-button color="warn">
+  <mat-icon>delete</mat-icon>
+</button>
+<table class="table-bordered margin-top-10">
   <thead>
     <tr>
+      <th width="30"><mat-checkbox></mat-checkbox></th>
       <th>ID</th>
       <th>Name</th>
       <th>Username</th>
@@ -9,15 +19,16 @@
   </thead>
   <tbody>
     <tr *ngFor="let user of users">
+      <td width="30"><mat-checkbox></mat-checkbox></td>
       <td>{{user.id}}</td>
       <td>{{user.name}}</td>
       <td>{{user.username}}</td>
       <td>
-        <a class="text-link" href="javascript:void()">{{user.email}}</a>
+        <a href="javascript:void()">{{user.email}}</a>
       </td>
     </tr>
   </tbody>
 </table>
-<button mat-fab class="fixed-bottom-right">
+<button mat-fab class="fixed-bottom-right" routerLink="/users/new">
   <mat-icon aria-label="Add user">add</mat-icon>
 </button>
