@@ -3,23 +3,23 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { 
-  MatButtonModule, 
-  MatCheckboxModule, 
+import {
+  MatButtonModule,
+  MatCheckboxModule,
   MatToolbarModule,
-  MatMenuModule, 
-  MatSidenavModule, 
-  MatFormFieldModule, 
-  MatInputModule, 
-  MatIconModule, 
-  MatSlideToggleModule, 
+  MatMenuModule,
+  MatSidenavModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatIconModule,
+  MatSlideToggleModule,
   MatDatepickerModule,
   MatNativeDateModule,
   MatSelectModule,
   MatRadioModule,
   MatGridListModule,
   MatListModule,
-  MatCardModule, 
+  MatCardModule,
   MatDialogModule } from '@angular/material';
 
 import { AppComponent } from './components/app/app.component';

@@ -78,3 +78,9 @@ section {
   -ms-flex-direction: row;
   flex-direction: row;
 }
+
+.fixed-bottom-right{
+  position: fixed!important;
+  bottom: 20px;
+  right: 20px;
+}
