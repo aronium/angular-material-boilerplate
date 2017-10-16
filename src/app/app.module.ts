@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import {
   MatButtonModule,
   MatCheckboxModule,
@@ -31,6 +33,8 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
 import { LoginComponent } from './components/login/login.component';
 import { UserListComponent } from './components/users/list/user-list.component';
 import { ToolbarComponent } from './components/shared/toolbar/toolbar.component';
+
+import { HttpService } from './services';
 
 const appRoutes: Routes = [
   {
@@ -73,6 +77,7 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
+    HttpClientModule,    
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
@@ -92,7 +97,9 @@ const appRoutes: Routes = [
     MatListModule,
     MatGridListModule
   ],
-  providers: [],
+  providers: [
+    HttpService
+  ],
   bootstrap: [AppComponent],
   entryComponents: [ExampleDialogComponent]
 })
