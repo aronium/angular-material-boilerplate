@@ -3,7 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
+    .mat-form-field {
+        width: 300px;
+    }
+
     .center {
         text-align: center;
     }
@@ -13,4 +17,3 @@
         min-width: 120px;
     }
 }
-

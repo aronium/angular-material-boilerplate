@@ -48,6 +48,16 @@ section {
   }
 }
 
+.mat-menu-content{
+  .mat-card{
+    padding: 10px 24px;
+
+    .mat-card-title {
+        font-size: 18px;
+    }
+  }
+}
+
 [fill], .fill {
   flex: 1 1 auto;
 }

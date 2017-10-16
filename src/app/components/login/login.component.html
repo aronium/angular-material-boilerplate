@@ -2,13 +2,15 @@
   <div class="center">
     <img src="/assets/logo.png" class="margin-bottom-20" />
     <div>
-      <mat-form-field floatPlaceholder="always">
+      <mat-form-field>
         <input matInput placeholder="Email" autofocus type="email">
+        <mat-icon matSuffix>email</mat-icon>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput floatPlaceholder="always" placeholder="Password" type="password">
+        <input matInput placeholder="Password" type="password">
+        <mat-icon matSuffix>lock</mat-icon>
       </mat-form-field>
     </div>
     <button mat-raised-button type="submit" routerLink="/home" color="primary">Login</button>

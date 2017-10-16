@@ -16,8 +16,12 @@
         <mat-icon aria-label="Menu">more_vert</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <mat-card>Profile &amp; Settings</mat-card>
+        <mat-card>
+          <mat-card-title>Profile &amp; Settings</mat-card-title>
+          <mat-card-subtitle>john.doe@example.com</mat-card-subtitle>
+        </mat-card>
         <button mat-menu-item><mat-icon>person</mat-icon>&nbsp;Profile</button>
+        <button mat-menu-item><mat-icon>settings</mat-icon>&nbsp;Settings</button>
         <button mat-menu-item routerLink="/login"><mat-icon>power_settings_new</mat-icon>&nbsp;Logout</button>
       </mat-menu>
     </div>
