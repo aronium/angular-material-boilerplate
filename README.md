@@ -1,4 +1,8 @@
-# Angular Boilerplate
+# Angular Material Boilerplate
+
+Boilerplate Angular 4 project with initial setup for angular application with [Material UI](material.angular.io)
+
+## Dev Notes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
 

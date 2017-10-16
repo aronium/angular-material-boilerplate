@@ -27,9 +27,10 @@ import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
-import { DevicesComponent } from './components/devices/devices.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { LoginComponent } from './components/login/login.component';
+import { UserListComponent } from './components/users/list/user-list.component';
+import { ToolbarComponent } from './components/shared/toolbar/toolbar.component';
 
 const appRoutes: Routes = [
   {
@@ -39,7 +40,7 @@ const appRoutes: Routes = [
       children: [
           { path: '', pathMatch: 'full', redirectTo: '/home' },
           { path: 'home', component: HomeComponent },
-          { path: 'devices', component: DevicesComponent },
+          { path: 'users', component: UserListComponent },
       ]
   },
   {
@@ -63,9 +64,11 @@ const appRoutes: Routes = [
     HomeComponent,
     MainLayoutComponent,
     NavBarComponent,
-    DevicesComponent,
     LoginLayoutComponent,
-    LoginComponent
+    LoginComponent,
+    UserListComponent,
+    UserListComponent,
+    ToolbarComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
