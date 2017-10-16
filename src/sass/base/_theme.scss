@@ -11,17 +11,8 @@ $app-default-theme:     mat-dark-theme($app-default, $app-default-accent, $app-d
 $background:            map-get($app-default-theme, background);
 $foreground:            map-get($app-default-theme, foreground);
 
-.theme-background{
-    background-color:   mat-color($background, card);
-    color:              mat-color($foreground, text);
-
-    input {
-        &:-webkit-autofill {
-            box-shadow: 0 0 0px 1000px mat-color($background, card) inset;
-            -webkit-box-shadow: 0 0 0px 1000px mat-color($background, card) inset;
-            -webkit-text-fill-color: mat-color($foreground, text);
-        }
-   }
-}
+$accent-color:          mat-color($app-default-accent, default);
+$background-color:      mat-color($background, card);
+$foreground-color:      mat-color($foreground, text);
 
 @include angular-material-theme($app-default-theme);

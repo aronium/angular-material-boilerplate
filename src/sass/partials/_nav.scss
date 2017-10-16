@@ -1,4 +1,4 @@
-@import '../base/_variables.scss';
+@import '../base/_theme.scss';
 
 .sidenav {
     width: $sidenav-width !important;
@@ -16,8 +16,8 @@
       }
 
       &.active, &.active:hover, &.active:focus{
-        background-color: $sidenav-link-active-background;
-        color: $sidenav-link-active-foreground;
+        background-color: $accent-color;
+        color: $foreground-color;
       }
     }
   }
