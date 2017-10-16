@@ -1,18 +1,39 @@
+// Use the following palettes to build a custom theme.
+// https://github.com/angular/material2/blob/master/src/lib/core/theming/_palette.scss
+// 
+// Theme is build using mixins defined in
+// https://github.com/angular/material2/blob/master/src/lib/core/theming/_theming.scss
+// 
+// Palettes contains a map of objects that can be used to extract a single color:
+// status-bar, app-bar, background, hover, card, dialog, disabled-button, raised-button, focused-button, selected-button, selected-disabled-button, disabled-button-toggle, unselected-chip, disabled-list-option 
 @import '~@angular/material/theming';
 
 @include mat-core();
 
+// Define theme defaults
 $app-default:           mat-palette($mat-blue);
 $app-default-accent:    mat-palette($mat-light-blue);
 $app-default-warn:      mat-palette($mat-red);
 
-$app-default-theme:     mat-dark-theme($app-default, $app-default-accent, $app-default-warn);
+// Build theme
+$theme:                 mat-dark-theme($app-default, $app-default-accent, $app-default-warn);
 
-$background:            map-get($app-default-theme, background);
-$foreground:            map-get($app-default-theme, foreground);
+// Palettes
+$primary:               map-get($theme, primary);
+$background:            map-get($theme, background);
+$foreground:            map-get($theme, foreground);
 
+// Extract individual colors from a palette
 $accent-color:          mat-color($app-default-accent, default);
 $background-color:      mat-color($background, card);
 $foreground-color:      mat-color($foreground, text);
+$primary-color:         mat-color($primary);
+$border-color:          mat-color($background, focused-button);
+$foreground-alt-color:  mat-color($foreground, secondary-text);
 
-@include angular-material-theme($app-default-theme);
+@include angular-material-theme($theme);
+
+.light-theme{
+    $light-theme: mat-light-theme($app-default, $app-default-accent, $app-default-warn);
+    @include angular-material-theme($light-theme);
+}

@@ -1,0 +1,41 @@
+@import 'theme.scss';
+
+table {
+    background-color: $background-color;
+    width: 100%;
+    max-width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    &>caption+thead>tr:first-child>td,
+    &>caption+thead>tr:first-child>th, 
+    &>colgroup+thead>tr:first-child>td, 
+    &>colgroup+thead>tr:first-child>th, 
+    &>thead:first-child>tr:first-child>td, 
+    &>thead:first-child>tr:first-child>th {
+        border-top: 0;
+        text-align: left;
+    }
+
+    &>tbody>tr>td, 
+    &>tbody>tr>th, 
+    &>tfoot>tr>td, 
+    &>tfoot>tr>th, 
+    &>thead>tr>td, 
+    &>thead>tr>th {
+        padding: 8px;
+        line-height: 1.4em;
+        vertical-align: top;
+        border-top: 1px solid $border-color;
+    }
+
+    &>tbody>tr>td{
+        font-weight: 300;
+        font-size: 0.9em;
+    }
+
+    &.table-bordered{
+        border: 1px solid $border-color;
+    }
+}
+

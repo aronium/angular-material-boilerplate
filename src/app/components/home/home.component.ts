@@ -17,8 +17,6 @@ export class HomeComponent {
   ];
 
   openDialog(): void {
-    let dialogRef = this.dialog.open(ExampleDialogComponent, {
-      data: {}
-    });
+    this.dialog.open(ExampleDialogComponent);
   }
 }

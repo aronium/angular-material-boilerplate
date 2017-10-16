@@ -1,4 +1,4 @@
-@import '_variables.scss';
+@import 'variables.scss';
 @import 'theme.scss';
 
 .text-center {
@@ -7,6 +7,25 @@
 
 section {
   margin-bottom: 20px;
+}
+
+a{
+  color: #007bff;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+  }
+
+  &.text-link{
+    text-decoration: underline;
+    color: currentColor;
+
+    &:hover{
+      text-decoration: none;
+      color: $foreground-alt-color;
+    }
+  }
 }
 
 .mat-sidenav-container {
