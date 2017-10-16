@@ -14,6 +14,7 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
   sideNavMode: string;
   isSideNavOpen: boolean = false;
   navigationSubscription: ISubscription;
+  isSidenavClosed: boolean = false;
 
   constructor(private router: Router) { }
 
@@ -40,5 +41,10 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
           this.sidenav.close();
         });
     }
+  }
+
+  toggleSidenav(){
+    this.sidenav.toggle();
+    this.isSidenavClosed = !this.isSidenavClosed;
   }
 }

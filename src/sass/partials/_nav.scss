@@ -1,5 +1,7 @@
+@import '../base/_variables.scss';
+
 .sidenav {
-    min-width: 200px !important;
+    width: $sidenav-width !important;
 
     .logo{
       img{
