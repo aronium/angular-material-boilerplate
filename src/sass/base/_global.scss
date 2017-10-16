@@ -5,24 +5,34 @@
 section {
   margin-bottom: 20px;
 }
+@media (max-width:768px){
+  mat-toolbar{
+    position: fixed;
+    top:0;
+    z-index: 10;
+  }
+  main{
+    padding: 80px 16px 16px;         
+  }
+}
 
-.fill {
+[fill], .fill {
   flex: 1 1 auto;
 }
 
-.toolbar-content{
-  color: red;
+[flex]{
+  -ms-flex: 1;
+  flex: 1;
+  box-sizing: border-box;
 }
 
-mat-toolbar{
-  position: fixed;
-  top:0;
-  z-index: 10;
-
-  .profile-menu-button{
-    float: right;
-  }
+[layout=column], [layout=row], [layout] {
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-main{
-   padding: 80px 16px 16px;         
+
+[layout=row] {
+  -ms-flex-direction: row;
+  flex-direction: row;
 }

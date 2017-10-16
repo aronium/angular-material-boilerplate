@@ -1,18 +1,27 @@
 <mat-sidenav-container fullscreen class="main-container">
 
   <mat-toolbar color="primary">
+    <!--Sidenav menu button-->    
     <button mat-icon-button (click)="sidenav.toggle()">
       <mat-icon aria-label="Toggle menu">menu</mat-icon>
     </button>
+    
+    <!--Title-->    
     <span>Material Boilerplate</span>
-    <span class="fill"></span>
-    <button class="profile-menu-button" mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon aria-label="Menu">more_vert</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Profile</button>
-      <button mat-menu-item routerLink="/login">Logout</button>
-    </mat-menu>
+    
+    <!--Right content-->
+    <div layout="row" layout-align="end center" flex>
+      <span class="fill"></span>
+      <button class="profile-menu-button" mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon aria-label="Menu">more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <mat-card>Profile &amp; Settings</mat-card>
+        <button mat-menu-item><mat-icon>person</mat-icon>&nbsp;Profile</button>
+        <button mat-menu-item routerLink="/login"><mat-icon>power_settings_new</mat-icon>&nbsp;Logout</button>
+      </mat-menu>
+    </div>
+
   </mat-toolbar>
 
   <mat-sidenav #sidenav [mode]="sideNavMode" [opened]="isSideNavOpen">

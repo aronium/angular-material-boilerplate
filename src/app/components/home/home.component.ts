@@ -18,7 +18,6 @@ export class HomeComponent {
 
   openDialog(): void {
     let dialogRef = this.dialog.open(ExampleDialogComponent, {
-      width: '400px', 
       data: {}
     });
   }
