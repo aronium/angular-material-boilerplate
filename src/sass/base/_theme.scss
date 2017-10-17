@@ -11,29 +11,21 @@
 @include mat-core();
 
 // Define theme defaults
-$app-default:           mat-palette($mat-blue);
+$app-default:           mat-palette($mat-blue, 600);
 $app-default-accent:    mat-palette($mat-light-blue);
-$app-default-warn:      mat-palette($mat-red, A700);
+$app-default-warn:      mat-palette($mat-red);
 
 // Build theme
 $theme:                 mat-dark-theme($app-default, $app-default-accent, $app-default-warn);
 
-// Palettes
-$primary:               map-get($theme, primary);
-$background:            map-get($theme, background);
-$foreground:            map-get($theme, foreground);
-
-// Extract individual colors from a palette
-$accent-color:          mat-color($app-default-accent, default);
-$background-color:      mat-color($background, card);
-$foreground-color:      mat-color($foreground, text);
-$primary-color:         mat-color($primary);
-$border-color:          mat-color($background, focused-button);
-$foreground-alt-color:  mat-color($foreground, secondary-text);
-
+// Include custom theme
 @include angular-material-theme($theme);
 
+// Get colors from them
+$accent-color:          mat-color(map-get($theme, accent));
+
 .light-theme{
-    $light-theme: mat-light-theme($app-default, $app-default-accent, $app-default-warn);
+    $app-light-warn:    mat-palette($mat-red, A700);
+    $light-theme:       mat-light-theme($app-default, $app-default-accent, $app-light-warn);
     @include angular-material-theme($light-theme);
 }

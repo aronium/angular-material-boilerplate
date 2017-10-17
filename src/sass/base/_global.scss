@@ -1,5 +1,4 @@
 @import 'variables.scss';
-@import 'theme.scss';
 
 .text-center {
   text-align: center!important;
@@ -23,7 +22,6 @@ a{
 
     &:hover{
       text-decoration: none;
-      color: $foreground-alt-color;
     }
   }
 }
@@ -105,15 +103,3 @@ a{
   right: 20px;
 }
 
-.theme-background{
-    background-color:   $background-color;
-    color:              $foreground-color;
-
-    input {
-        &:-webkit-autofill {
-            box-shadow: 0 0 0px 1000px mat-color($background, card) inset;
-            -webkit-box-shadow: 0 0 0px 1000px mat-color($background, card) inset;
-            -webkit-text-fill-color: mat-color($foreground, text);
-        }
-   }
-}

@@ -15,9 +15,24 @@
         margin-left: 10px;
       }
 
-      &.active, &.active:hover, &.active:focus{
-        background-color: $accent-color;
-        color: $foreground-color;
+      &.active, 
+      &.active:hover, 
+      &.active:focus, 
+      &.active:active{
+        background-color: $accent-color!important;
+      }
+    }
+  }
+
+  .light-theme{
+    .sidenav {
+      a{
+        &.active, 
+        &.active:hover, 
+        &.active:focus, 
+        &.active:active{
+          color: #ffffff!important;
+        }
       }
     }
   }

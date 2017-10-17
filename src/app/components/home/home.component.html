@@ -1,80 +1,80 @@
 <section>
-    <mat-checkbox>Checkbox</mat-checkbox>
-    <mat-radio-group>
-      <mat-radio-button value="1">Option 1</mat-radio-button>
-      <mat-radio-button value="2">Option 2</mat-radio-button>
-    </mat-radio-group>
-  </section>
+  <mat-slide-toggle color="accent" [checked]="isDarkTheme" (change)="switchTheme($event)">Dark theme</mat-slide-toggle>
+</section>
+<section>
+  <mat-checkbox checked="true">Checkbox</mat-checkbox>
+  <mat-checkbox indeterminate="true">Indeterminate</mat-checkbox>
+  <mat-radio-group>
+    <mat-radio-button value="1">Option 1</mat-radio-button>
+    <mat-radio-button value="2">Option 2</mat-radio-button>
+  </mat-radio-group>
+</section>
 
-  <section>
-    <form class="example-form">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Favorite food">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Favorite food">
-          <mat-option *ngFor="let food of foods" [value]="food.value">
-            {{ food.viewValue }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </form>
-  </section>
+<section>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Favorite food">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Favorite food">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</section>
 
-  <section>
-    <mat-slide-toggle color="accent">Slide me!</mat-slide-toggle>
-  </section>
+<section>
+  <h3>Basic Buttons</h3>
+  <div class="button-row">
+    <button mat-button>Basic</button>
+    <button mat-button color="primary">Primary</button>
+    <button mat-button color="accent">Accent</button>
+    <button mat-button color="warn">Warn</button>
+    <button mat-button disabled>Disabled</button>
+    <a mat-button routerLink=".">Link</a>
+  </div>
 
-  <section>
-    <h3>Basic Buttons</h3>
-    <div class="button-row">
-      <button mat-button>Basic</button>
-      <button mat-button color="primary">Primary</button>
-      <button mat-button color="accent">Accent</button>
-      <button mat-button color="warn">Warn</button>
-      <button mat-button disabled>Disabled</button>
-      <a mat-button routerLink=".">Link</a>
-    </div>
+  <h3>Raised Buttons</h3>
+  <div class="button-row">
+    <button mat-raised-button>Basic</button>
+    <button mat-raised-button color="primary">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-raised-button color="warn">Warn</button>
+    <button mat-raised-button disabled>Disabled</button>
+    <a mat-raised-button routerLink=".">Link</a>
+  </div>
+</section>
 
-    <h3>Raised Buttons</h3>
-    <div class="button-row">
-      <button mat-raised-button>Basic</button>
-      <button mat-raised-button color="primary">Primary</button>
-      <button mat-raised-button color="accent">Accent</button>
-      <button mat-raised-button color="warn">Warn</button>
-      <button mat-raised-button disabled>Disabled</button>
-      <a mat-raised-button routerLink=".">Link</a>
-    </div>
-  </section>
+<section>
+  <button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+</section>
 
-  <section>
-    <button mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
-  </section>
+<section>
+  <mat-card>
+    <mat-card-title>Card title</mat-card-title>
+    <mat-card-subtitle>Card subtitle</mat-card-subtitle>
+    <mat-card-content> Primary card content. Intended for blocks of text</mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button>Action button</button>
+    </mat-card-actions>
+  </mat-card>
+</section>
 
-  <section>
-    <mat-card>
-      <mat-card-title>Card title</mat-card-title>
-      <mat-card-subtitle>Card subtitle</mat-card-subtitle>
-      <mat-card-content> Primary card content. Intended for blocks of text</mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button>Action button</button>
-      </mat-card-actions>
-    </mat-card>
-  </section>
+<section>
+  <button mat-raised-button (click)="openDialog()">Dialog example</button>
+</section>
 
-  <section>
-    <button mat-raised-button (click)="openDialog()">Dialog example</button>
-  </section>
-
-  <button mat-fab class="fixed-bottom-right">
-    <mat-icon aria-label="Refresh">cached</mat-icon>
-  </button>
+<button mat-fab class="fixed-bottom-right">
+  <mat-icon aria-label="Refresh">cached</mat-icon>
+</button>

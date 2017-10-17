@@ -1,7 +1,4 @@
-@import 'theme.scss';
-
 table {
-    background-color: $background-color;
     width: 100%;
     max-width: 100%;
     border-spacing: 0;
@@ -26,16 +23,11 @@ table {
         padding: 8px;
         line-height: 1.4em;
         vertical-align: top;
-        border-top: 1px solid $border-color;
     }
 
     &>tbody>tr>td{
         font-weight: 400;
         font-size: 0.9em;
-    }
-
-    &.table-bordered{
-        border: 1px solid $border-color;
     }
 }
 
