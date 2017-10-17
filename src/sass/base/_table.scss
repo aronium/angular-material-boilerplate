@@ -1,3 +1,7 @@
+@import '_theme.scss';
+
+$light-theme-border-color: rgba(black, 0.12);
+
 table {
     width: 100%;
     max-width: 100%;
@@ -20,14 +24,36 @@ table {
     &>tfoot>tr>th, 
     &>thead>tr>td, 
     &>thead>tr>th {
-        padding: 8px;
+        padding: 12px 8px;
         line-height: 1.4em;
         vertical-align: top;
     }
 
-    &>tbody>tr>td{
-        font-weight: 400;
-        font-size: 0.9em;
+    &.table-bordered{
+        border: 1px solid $border-color;
+
+        tr{
+            border-bottom: 1px solid $border-color;
+        }
     }
 }
 
+.light-theme{
+    table{
+        &.table-bordered{
+            border: 1px solid $light-theme-border-color;
+    
+            tr{
+                border-bottom: 1px solid $light-theme-border-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+}

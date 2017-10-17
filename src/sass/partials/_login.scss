@@ -2,18 +2,27 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
 
     .mat-form-field {
         width: 300px;
     }
 
     .center {
+        margin-top: 40px;
         text-align: center;
     }
 
     button{
         float: right;
         min-width: 120px;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+        -webkit-transition-delay: 9999s;
     }
 }

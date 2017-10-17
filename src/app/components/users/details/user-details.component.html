@@ -1,6 +1,53 @@
 <button mat-raised-button routerLink="/users">
   <mat-icon>arrow_back</mat-icon> Back to list
 </button>
-<p>
-  User details
-</p>
+<button mat-raised-button>
+  <mat-icon aria-label="Edit">edit</mat-icon>
+</button>
+<button mat-raised-button color="warn">
+  <mat-icon aria-label="Delete">delete</mat-icon>
+</button>
+
+<section *ngIf="user" class="margin-top-10">
+  <mat-card>
+    <mat-card-title>{{ user.name }}</mat-card-title>
+    <mat-card-subtitle>Username: {{ user.username }}</mat-card-subtitle>
+    <mat-card-content>
+      <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd>{{ user.name }}</dd>
+        <dt>Username</dt>
+        <dd>{{ user.username }}</dd>
+        <dt>Email</dt>
+        <dd>{{ user.email }}</dd>
+        <dt>Phone</dt>
+        <dd>{{ user.phone }}</dd>
+        <dt>Web</dt>
+        <dd>{{ user.website }}</dd>
+      </dl>
+    </mat-card-content>
+  </mat-card>
+</section>
+
+<section *ngIf="user">
+    <mat-card>
+        <mat-card-title>Company</mat-card-title>
+        <mat-card-content>
+          <dl class="dl-horizontal">
+            <dt>Company name</dt>
+            <dd>{{ user.company.name }}</dd>
+    
+            <dt>Additional data</dt>
+            <dd>{{ user.company.catchPhrase }}</dd>
+    
+            <dt>Product search type
+              </dt>
+            <dd>{{ user.company.bs }}</dd>
+          </dl>
+        </mat-card-content>
+      </mat-card>
+</section>
+
+<button mat-fab class="fixed-bottom-right" routerLink="/users/new">
+  <mat-icon aria-label="Edit">edit</mat-icon>
+</button>

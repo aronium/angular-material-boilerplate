@@ -10,4 +10,8 @@ export class UserService {
     getUsers() {
         return this.http.get('/users');
     }
+
+    getUser(id: any){
+        return this.http.get(`/users/${id}`);
+    }
 }
