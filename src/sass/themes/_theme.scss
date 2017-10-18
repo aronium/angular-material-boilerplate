@@ -43,7 +43,8 @@ $light-theme-border-color: rgba(black, 0.12);
 }
 
 .mixed-theme{
-    $mixed-theme:      mat-light-theme($app-default, $app-default-accent, $app-light-warn);
+    $app-mixed-accent: mat-palette($mat-light-blue, 700);
+    $mixed-theme:      mat-light-theme($app-default, $app-mixed-accent, $app-light-warn);
     @include angular-material-theme($mixed-theme);
 }
 

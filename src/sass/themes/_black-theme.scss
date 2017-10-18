@@ -13,6 +13,12 @@
       border-bottom: 1px solid $border-color;
     }
 
+    .mat-sidenav-content{
+      .mat-card {
+        background: #313131!important;
+      }
+    }
+
     .mat-sidenav{
       background: #222222!important;
       border-right: 1px solid $border-color;

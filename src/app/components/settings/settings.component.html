@@ -8,14 +8,13 @@
       </mat-option>
     </mat-select>
   </mat-form-field> -->
-<div class="margin-bottom-20">
-  <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="selectedTheme">
-    <mat-button-toggle [matTooltip]="theme.name" *ngFor="let theme of themes" [value]="theme" (click)="onThemeSelected(theme)">
-      <mat-icon class="theme-indicator" [ngClass]="theme.cssClass">fiber_manual_record</mat-icon>
-    </mat-button-toggle>
-  </mat-button-toggle-group>
-</div>
-
+  <div class="margin-bottom-20">
+    <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="selectedTheme">
+      <mat-button-toggle [matTooltip]="theme.name" *ngFor="let theme of themes" [value]="theme" (click)="onThemeSelected(theme)">
+        <mat-icon class="theme-indicator" [ngClass]="theme.cssClass">fiber_manual_record</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
 </div>
 <div mat-dialog-actions>
   <button mat-raised-button [mat-dialog-close]="true" tabindex="1">Close</button>
