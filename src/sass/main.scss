@@ -1,6 +1,11 @@
 @import 'sass/mixins/_margins.scss';
 
-@import 'base/_theme.scss';
+@import 'themes/_theme.scss';
+@import 'themes/_light-theme.scss';
+@import 'themes/_mixed-theme.scss';
+@import 'themes/_white-snow-theme.scss';
+@import 'themes/_black-theme.scss';
+
 @import 'base/_reset.scss';
 @import 'base/_global.scss';
 @import 'base/_table.scss';

@@ -1,7 +1,9 @@
-@import 'variables.scss';
-@import 'theme.scss';
+@import '_variables.scss';
+@import '../themes/_theme.scss';
 
+//////////////////////////////////////////////////////////////////////////////
 // Main container styles
+//////////////////////////////////////////////////////////////////////////////
 
 .mat-sidenav-container {
 
@@ -43,10 +45,18 @@
   }
 }
 
+//////////////////////////////////////////////////////////////////////////////
 // Global classes
+//////////////////////////////////////////////////////////////////////////////
 
 .text-center {
   text-align: center !important;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 300;
+    margin-top: 0;
 }
 
 section {
@@ -80,15 +90,18 @@ section {
   right: 20px;
 }
 
+//////////////////////////////////////////////////////////////////////////////
 // Links
+//////////////////////////////////////////////////////////////////////////////
 
 a {
   color: $accent-color;
   text-decoration: none;
+  transition: color 0.2s;
 
   &:hover {
-    color: $accent-color;
-    text-decoration: underline;
+    color: $accent-color-dark;
+    text-decoration: none;
   }
 }
 
@@ -102,6 +115,10 @@ a {
   }
 }
 
+//////////////////////////////////////////////////////////////////////////////
+// Lists
+//////////////////////////////////////////////////////////////////////////////
+
 dl {
   &.dl-horizontal {
     width: 100%;
@@ -109,7 +126,7 @@ dl {
     padding: 0;
     margin: 0;
     line-height: 1.5;
-    font-size: 1.1em;
+    font-size: 1em;
 
     dt {
       @media (min-width: 768px) {
@@ -134,4 +151,10 @@ dl {
       }
     }
   }
+}
+
+.theme-indicator{
+  color: currentColor;
+  border: 2px solid currentColor;
+  border-radius: 50%;
 }

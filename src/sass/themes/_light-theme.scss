@@ -1,0 +1,34 @@
+.light-theme{
+  &.theme-indicator{
+    color: #cccccc!important;
+  }
+
+  .mat-toolbar{
+    background: $accent-color!important;
+    color: #ffffff!important;
+  }
+
+  .sidenav {
+    a{
+      &.active,
+      &.active:hover,
+      &.active:focus,
+      &.active:active{
+        color: #ffffff!important;
+      }
+    }
+  }
+
+  ///////////////////////////////////////////////
+  // Tables
+  //////////////////////////////////////////////
+  table{
+      &.table-bordered{
+          border: 1px solid $light-theme-border-color;
+
+          tr{
+              border-bottom: 1px solid $light-theme-border-color;
+          }
+      }
+  }
+}

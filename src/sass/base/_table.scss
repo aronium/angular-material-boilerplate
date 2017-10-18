@@ -1,6 +1,4 @@
-@import '_theme.scss';
-
-$light-theme-border-color: rgba(black, 0.12);
+@import '../themes/_theme.scss';
 
 table {
     width: 100%;
@@ -9,20 +7,20 @@ table {
     border-collapse: collapse;
 
     &>caption+thead>tr:first-child>td,
-    &>caption+thead>tr:first-child>th, 
-    &>colgroup+thead>tr:first-child>td, 
-    &>colgroup+thead>tr:first-child>th, 
-    &>thead:first-child>tr:first-child>td, 
+    &>caption+thead>tr:first-child>th,
+    &>colgroup+thead>tr:first-child>td,
+    &>colgroup+thead>tr:first-child>th,
+    &>thead:first-child>tr:first-child>td,
     &>thead:first-child>tr:first-child>th {
         border-top: 0;
         text-align: left;
     }
 
-    &>tbody>tr>td, 
-    &>tbody>tr>th, 
-    &>tfoot>tr>td, 
-    &>tfoot>tr>th, 
-    &>thead>tr>td, 
+    &>tbody>tr>td,
+    &>tbody>tr>th,
+    &>tfoot>tr>td,
+    &>tfoot>tr>th,
+    &>thead>tr>td,
     &>thead>tr>th {
         padding: 12px 8px;
         line-height: 1.4em;
@@ -34,18 +32,6 @@ table {
 
         tr{
             border-bottom: 1px solid $border-color;
-        }
-    }
-}
-
-.light-theme{
-    table{
-        &.table-bordered{
-            border: 1px solid $light-theme-border-color;
-    
-            tr{
-                border-bottom: 1px solid $light-theme-border-color;
-            }
         }
     }
 }

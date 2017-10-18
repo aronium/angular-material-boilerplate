@@ -1,4 +1,4 @@
-<mat-toolbar color="accent" role="nav">
+<mat-toolbar color="accent">
   <!--Sidenav menu button-->
   <button mat-icon-button (click)="onToggleMenu()">
     <mat-icon aria-label="Toggle menu">menu</mat-icon>
@@ -18,8 +18,8 @@
         <mat-card-title>Profile &amp; Settings</mat-card-title>
         <mat-card-subtitle>john.doe@example.com</mat-card-subtitle>
       </mat-card>
-      <button mat-menu-item><mat-icon>person</mat-icon>&nbsp;Profile</button>
-      <button mat-menu-item><mat-icon>settings</mat-icon>&nbsp;Settings</button>
+      <button mat-menu-item routerLink="/profile"><mat-icon>person</mat-icon>&nbsp;Profile</button>
+      <button mat-menu-item (click)="onOpenSettings()"><mat-icon>settings</mat-icon>&nbsp;Settings</button>
       <button mat-menu-item routerLink="/login"><mat-icon>power_settings_new</mat-icon>&nbsp;Logout</button>
     </mat-menu>
   </div>

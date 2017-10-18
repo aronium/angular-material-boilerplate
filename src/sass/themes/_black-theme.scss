@@ -1,0 +1,23 @@
+.black-theme{
+  &.theme-indicator{
+    color: #000000!important;
+  }
+
+  .mat-sidenav{
+    background: #121212!important;
+  }
+
+  .sidenav {
+    a{
+      color: #ffffff!important;
+
+      &.active,
+      &.active:hover,
+      &.active:focus,
+      &.active:active{
+        background: #303030!important;
+        color: #ffffff!important;
+      }
+    }
+  }
+}

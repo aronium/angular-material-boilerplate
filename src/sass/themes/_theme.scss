@@ -1,6 +1,6 @@
 // Use the following palettes to build a custom theme:
 // https://github.com/angular/material2/blob/master/src/lib/core/theming/_palette.scss
-// 
+//
 // Theme is build using mixins defined in:
 // https://github.com/angular/material2/blob/master/src/lib/core/theming/_theming.scss
 
@@ -25,11 +25,32 @@ $primary:               map-get($theme, primary);
 $background:            map-get($theme, background);
 
 $accent-color:          mat-color($accent);
+$accent-color-dark:     mat-color($accent, 800);
 $primary-color:         mat-color($primary);
 $border-color:          mat-color($background, card);
 
+$app-light-warn:        mat-palette($mat-red, A700);
+$light-theme-border-color: rgba(black, 0.12);
+
 .light-theme{
-    $app-light-warn:    mat-palette($mat-red, A700);
     $light-theme:       mat-light-theme($app-default, $app-default-accent, $app-light-warn);
     @include angular-material-theme($light-theme);
+}
+
+.white-snow-theme{
+    $snow-theme:       mat-light-theme($app-default, $app-default-accent, $app-light-warn);
+    @include angular-material-theme($snow-theme);
+}
+
+.mixed-theme{
+    $mixed-theme:      mat-light-theme($app-default, $app-default-accent, $app-light-warn);
+    @include angular-material-theme($mixed-theme);
+}
+
+.black-theme{
+    $primary-dark: mat-palette($mat-blue-grey, 700, 500, 900);
+    $accent-dark:  mat-palette($mat-grey, 900);
+
+    $black-theme: mat-dark-theme($primary-dark, $accent-dark);
+    @include angular-material-theme($black-theme);
 }

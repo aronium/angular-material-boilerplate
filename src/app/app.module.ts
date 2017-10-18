@@ -2,11 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
   MatButtonModule,
+  MatButtonToggleModule,
+  MatTooltipModule,
   MatCheckboxModule,
   MatToolbarModule,
   MatMenuModule,
@@ -36,6 +39,7 @@ import { ToolbarComponent } from './components/shared/toolbar/toolbar.component'
 
 import { HttpService } from './services';
 import { UserDetailsComponent } from './components/users/details/user-details.component';
+import { SettingsComponent } from './components/settings/settings.component';
 
 const appRoutes: Routes = [
   {
@@ -47,7 +51,8 @@ const appRoutes: Routes = [
           { path: 'home', component: HomeComponent },
           { path: 'users', component: UserListComponent },
           { path: 'users/new', component: UserDetailsComponent },
-          { path: 'users/details/:id', component: UserDetailsComponent }
+          { path: 'users/details/:id', component: UserDetailsComponent },
+          { path: 'settings', component: SettingsComponent }
       ]
   },
   {
@@ -76,14 +81,18 @@ const appRoutes: Routes = [
     UserListComponent,
     UserListComponent,
     ToolbarComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    SettingsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    HttpClientModule,    
+    HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatButtonToggleModule,
+    MatTooltipModule,
     MatCheckboxModule,
     MatToolbarModule,
     MatMenuModule,
