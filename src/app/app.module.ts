@@ -25,7 +25,8 @@ import {
   MatGridListModule,
   MatListModule,
   MatCardModule,
-  MatDialogModule } from '@angular/material';
+  MatDialogModule,
+  MatSnackBarModule } from '@angular/material';
 
 import { AppComponent } from './components/app/app.component';
 import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.component';
@@ -108,7 +109,8 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatRadioModule,
     MatListModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSnackBarModule
   ],
   providers: [
     HttpService

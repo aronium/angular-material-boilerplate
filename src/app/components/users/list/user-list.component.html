@@ -12,7 +12,7 @@
     <thead>
       <tr>
         <th width="30">
-          <mat-checkbox></mat-checkbox>
+          <mat-checkbox (click)="checkAll()"></mat-checkbox>
         </th>
         <th>ID</th>
         <th>Name</th>
@@ -23,7 +23,7 @@
     <tbody>
       <tr *ngFor="let user of users">
         <td width="30">
-          <mat-checkbox></mat-checkbox>
+          <mat-checkbox [checked]="user.selected"></mat-checkbox>
         </td>
         <td>{{user.id}}</td>
         <td><a routerLink="/users/details/{{user.id}}">{{user.name}}</a></td>
