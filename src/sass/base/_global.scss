@@ -83,11 +83,12 @@ section {
 // Links
 
 a {
-  color: currentColor;
+  color: $accent-color;
   text-decoration: none;
 
   &:hover {
-    color: currentColor;
+    color: $accent-color;
+    text-decoration: underline;
   }
 }
 
