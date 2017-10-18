@@ -8,15 +8,17 @@
     color: #ffffff!important;
   }
 
-  .sidenav {
-    a{
-      &.active,
-      &.active:hover,
-      &.active:focus,
-      &.active:active{
-        color: #ffffff!important;
+  .mat-sidenav{
+    .sidenav {
+      a{
+        &.active,
+        &.active:hover,
+        &.active:focus,
+        &.active:active{
+          color: #ffffff!important;
+        }
       }
-    }
+    } 
   }
 
   ///////////////////////////////////////////////

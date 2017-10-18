@@ -37,7 +37,7 @@ $light-theme-border-color: rgba(black, 0.12);
     @include angular-material-theme($light-theme);
 }
 
-.white-snow-theme{
+.snow-white-theme{
     $snow-theme:       mat-light-theme($app-default, $app-default-accent, $app-light-warn);
     @include angular-material-theme($snow-theme);
 }
@@ -48,8 +48,8 @@ $light-theme-border-color: rgba(black, 0.12);
 }
 
 .black-theme{
-    $primary-dark: mat-palette($mat-blue-grey, 700, 500, 900);
-    $accent-dark:  mat-palette($mat-grey, 900);
+    $primary-dark: mat-palette($mat-blue-grey);
+    $accent-dark:  mat-palette($mat-blue-grey, 700);
 
     $black-theme: mat-dark-theme($primary-dark, $accent-dark);
     @include angular-material-theme($black-theme);

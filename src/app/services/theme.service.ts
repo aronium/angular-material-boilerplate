@@ -6,7 +6,7 @@ export class ThemeService {
   themes: Array<any> = [
     { value: 'default', name: 'Default', cssClass: null },
     { value: 'light', name: 'Light', cssClass: 'light-theme' },
-    { value: 'white-snow', name: 'White snow', cssClass: 'white-snow-theme' },
+    { value: 'snow-white', name: 'Snow white', cssClass: 'snow-white-theme' },
     { value: 'mixed', name: 'Mixed', cssClass: 'mixed-theme' },
     { value: 'black', name: 'Black', cssClass: 'black-theme' }
   ];

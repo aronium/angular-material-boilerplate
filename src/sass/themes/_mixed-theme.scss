@@ -1,15 +1,16 @@
 .mixed-theme{
   &.theme-indicator{
-    color: blue!important;
+    color: rgb(3, 151, 236)!important;
   }
   .mat-toolbar{
     background: white!important;
     color: #444444!important;
+    border-bottom: 1px solid $light-theme-border-color;
   }
 
   .mat-sidenav{
     background: #039BE5!important;
-
+    
     .sidenav {
       a{
         color: #ffffff!important;

@@ -1,0 +1,46 @@
+.snow-white-theme{
+
+  &.theme-indicator{
+    color: #ffffff!important;
+    border-color: #cccccc;
+  }
+
+  .mat-sidenav-container{
+    background: white!important;
+    .mat-toolbar{
+      background: white!important;
+      color: #444444!important;
+      border-bottom: 1px solid $light-theme-border-color;
+    }
+    .mat-sidenav{
+      border-right: 1px solid $light-theme-border-color;
+      
+      .sidenav {
+        a{
+          color: #444444!important;
+
+          &.active,
+          &.active:hover,
+          &.active:focus,
+          &.active:active{
+            background: rgba(0,0,0,0.1)!important;
+            color: #111111!important;
+          }
+        }
+      }
+  }
+}
+
+  ///////////////////////////////////////////////
+  // Tables
+  //////////////////////////////////////////////
+  table{
+      &.table-bordered{
+          border: 1px solid $light-theme-border-color;
+
+          tr{
+              border-bottom: 1px solid $light-theme-border-color;
+          }
+      }
+  }
+}
