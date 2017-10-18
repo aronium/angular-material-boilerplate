@@ -11,23 +11,30 @@ export class ThemeService {
     { value: 'black', name: 'Black', cssClass: 'black-theme' }
   ];
 
-  setCurrentTheme(){
+  loadSavedTheme(){
     let theme = localStorage.getItem('theme');
     if(theme !== undefined){
       let selectedTheme = JSON.parse(theme);
-      let body = document.getElementsByTagName('body')[0];
-      body.classList.add(selectedTheme.cssClass);
+      if(selectedTheme != null && selectedTheme.cssClass){
+        let body = document.getElementsByTagName('body')[0];
+        body.classList.add(selectedTheme.cssClass);
+      }
     }
   }
 
   currentTheme(){
     let storedTheme = localStorage.getItem('theme')
-    if(storedTheme !=null){
-        return storedTheme;
+
+    if(storedTheme != null){
+        let tempTheme = JSON.parse(storedTheme);
+        let theme = this.themes.filter(theme => theme.value && theme.value === tempTheme.value)
+
+        if(theme != null)
+          return theme[0];
     }
-    else{
-      return this.themes[0];
-    }
+
+    return this.themes[0];
+
   }
 
   setTheme(theme: any){

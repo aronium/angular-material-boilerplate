@@ -9,6 +9,6 @@ import { ThemeService } from '../../services';
 export class AppComponent {
 
   constructor(private themeService: ThemeService){
-    themeService.setCurrentTheme();
+    themeService.loadSavedTheme();
   }
 }
