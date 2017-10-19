@@ -15,18 +15,6 @@
       &:first-child{
         margin: 0;
       }
-
-      &.flex-2{
-        @include flex(2 2);
-      }
-
-      &.flex-3{
-        @include flex(3);
-      }
-
-      &.flex-4{
-        @include flex(4);
-      }
     }
   }
 
