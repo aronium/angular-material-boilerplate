@@ -15,6 +15,18 @@
       &:first-child{
         margin: 0;
       }
+
+      &.col-x2{
+        @include flex-grow(2);
+      }
+
+      &.col-x3{
+        @include flex-grow(3);
+      }
+
+      &.col-x4{
+        @include flex-grow(4);
+      }
     }
   }
 
