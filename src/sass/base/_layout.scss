@@ -1,17 +1,31 @@
-.flex-grid{
+@import '../mixins/flex.scss';
 
-  display: flex;
+.flex-container{
+
+  @include flexbox();
   align-items: stretch;
 
   @media(min-width: 768px){
     flex-direction: row;
 
-    & > * {
-      flex: 1;
+    .col {
+      @include flex(1);
       margin: 0 0 0 1em;
 
       &:first-child{
         margin: 0;
+      }
+
+      &.flex-2{
+        @include flex(2 2);
+      }
+
+      &.flex-3{
+        @include flex(3);
+      }
+
+      &.flex-4{
+        @include flex(4);
       }
     }
   }
@@ -19,7 +33,7 @@
   @media(max-width: 767px){
     flex-direction: column;
 
-    & > * {
+    .col {
       flex: 1;
       margin: 1em 0 0 0;
 

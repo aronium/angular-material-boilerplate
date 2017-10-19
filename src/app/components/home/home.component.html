@@ -1,19 +1,83 @@
-<section class="flex-grid">
-  <mat-card>
-    Card 1
-  </mat-card>
-  <mat-card>
-    Card 2
-  </mat-card>
-  <mat-card>
-    Card 3
-  </mat-card>
-  <mat-card>
-    Card 4
+<h1 class="title">Flex layout</h1>
+<section class="flex-container">
+  <mat-card class="col">
+    .col
   </mat-card>
 </section>
+<section class="flex-container">
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+</section>
+<section class="flex-container">
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+</section>
+<section class="flex-container">
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+</section>
+<section class="flex-container">
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+  <mat-card class="col">
+    .col
+  </mat-card>
+</section>
+
+<h3 class="sub-title">Nested flex containers</h3>
+<p>Using nesting so columns keeps the same width as flex items put directly in container</p>
+<section class="flex-container">
+  <div class="col flex-container">
+    <mat-card class="col">
+      .col
+    </mat-card>
+  </div>
+  <div class="col flex-container">
+    <mat-card class="col">
+      .col
+    </mat-card>
+    <mat-card class="col">
+      .col
+    </mat-card>
+  </div>
+</section>
+
 <section>
-  <h3>Basic Buttons</h3>
+  <h3 class="sub-title">Basic Buttons</h3>
   <div class="button-row">
     <button mat-button>Basic</button>
     <button mat-button color="primary">Primary</button>
@@ -23,7 +87,7 @@
     <a mat-button routerLink=".">Link</a>
   </div>
 
-  <h3>Raised Buttons</h3>
+  <h3 class="sub-title">Raised Buttons</h3>
   <div class="button-row">
     <button mat-raised-button>Basic</button>
     <button mat-raised-button color="primary">Primary</button>
@@ -34,6 +98,7 @@
   </div>
 </section>
 
+<h3 class="sub-title">Modal dialog</h3>
 <section>
   <button mat-raised-button (click)="openDialog()">Dialog example</button>
 </section>
