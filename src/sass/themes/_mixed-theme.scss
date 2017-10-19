@@ -10,8 +10,15 @@
 
   .mat-sidenav{
     background: #0288D1!important;
-    
+
     .sidenav {
+      .logo{
+        h1{
+          color: #ffffff;
+          border-bottom-color: $light-theme-border-color;
+        }
+      }
+
       a{
         color: #ffffff!important;
 

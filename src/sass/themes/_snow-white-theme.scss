@@ -14,8 +14,14 @@
     }
     .mat-sidenav{
       border-right: 1px solid $light-theme-border-color;
-      
+
       .sidenav {
+        .logo{
+          h1{
+            border-bottom-color: $light-theme-border-color;
+          }
+        }
+
         a{
           color: #444444!important;
 

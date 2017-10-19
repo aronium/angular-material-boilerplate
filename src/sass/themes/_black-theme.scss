@@ -22,11 +22,18 @@
     .mat-sidenav{
       background: #222222!important;
       border-right: 1px solid $border-color;
-      
+
       .sidenav {
+
+        .logo{
+          h1{
+            border-bottom-color: $border-color;
+          }
+        }
+
         a{
           color: #ffffff!important;
-    
+
           &.active,
           &.active:hover,
           &.active:focus,
