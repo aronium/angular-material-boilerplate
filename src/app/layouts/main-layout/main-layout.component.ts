@@ -17,7 +17,17 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router) { }
 
-  private checkSidenavMode(){
+  private getSidenavState(): boolean {
+    let savedState = localStorage.getItem("sidenavOpen");
+
+    if (savedState) {
+      return JSON.parse(savedState);
+    }
+
+    return true;
+  }
+
+  private checkSidenavMode() {
     if (window.innerWidth < 768) {
       this.sidenavMode = 'over';
       this.isSidenavOpen = false;
@@ -26,20 +36,20 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
     }
     else {
       this.sidenavMode = 'side';
-      this.isSidenavOpen = true;
-
-      this.sidenav.open();
+      this.isSidenavOpen = this.getSidenavState();
+      if (this.isSidenavOpen)
+        this.sidenav.open();
     }
   }
 
-  private subscribeToRouteChangeEvent(){
+  private subscribeToRouteChangeEvent() {
     // Hide sidenav on route change if using 'over' mode
     this.navigationSubscription = this.router.events
-    .filter(event => event instanceof NavigationStart)
-    .subscribe((event: NavigationStart) => {
-      if (this.sidenav.mode === 'over')
-        this.sidenav.close();
-    });
+      .filter(event => event instanceof NavigationStart)
+      .subscribe((event: NavigationStart) => {
+        if (this.sidenav.mode === 'over')
+          this.sidenav.close();
+      });
   }
 
   @HostListener('window:resize', ['$event'])
@@ -49,7 +59,7 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscribeToRouteChangeEvent();
-    this.checkSidenavMode();    
+    this.checkSidenavMode();
   }
 
   ngOnDestroy(): void {
@@ -59,12 +69,14 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
   }
 
   toggleSidenav() {
-    if(this.sidenavMode === 'side')
-    {
+    if (this.sidenavMode === 'side') {
       this.sidenav.toggle();
       this.isSidenavOpen = !this.isSidenavOpen;
+
+      // Keep open state for desktops only
+      localStorage.setItem("sidenavOpen", JSON.stringify(this.isSidenavOpen));
     }
-    else{
+    else {
       this.sidenav.open();
     }
   }
