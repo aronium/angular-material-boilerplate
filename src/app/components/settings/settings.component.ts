@@ -23,7 +23,7 @@ export class SettingsComponent {
   onThemeSelected(theme: any){
     this.themeService.setTheme(theme);
 
-    this.snackBar.open(`Current theme changed to "${theme.name}"`, null, {
+    this.snackBar.open(`Theme changed to "${theme.name}"`, null, {
       duration: 3000,
     });
   }

@@ -1,8 +1,8 @@
-<mat-sidenav-container fullscreen class="main-container" [ngClass]="{ 'sidenav-closed':isSidenavClosed }">
+<mat-sidenav-container fullscreen class="main-container" [ngClass]="{ 'sidenav-closed': !isSidenavOpen }">
 
   <app-toolbar header="App Title" (toggleMenu)="toggleSidenav()"></app-toolbar>
 
-  <mat-sidenav #sidenav [mode]="sideNavMode" [opened]="isSideNavOpen">
+  <mat-sidenav #sidenav [mode]="sidenavMode">
     <app-nav-bar></app-nav-bar>
   </mat-sidenav>
 

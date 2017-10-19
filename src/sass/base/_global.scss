@@ -7,7 +7,7 @@
 
 .mat-sidenav-container {
 
-  @media screen and (min-width: 768px) {
+  @media(min-width: 768px) {
 
     .mat-toolbar {
       // Use the same transition sidenav is using, so it animates smoothly
@@ -18,14 +18,6 @@
       max-width: calc(100% - #{$sidenav-width});
     }
 
-    &.sidenav-closed {
-      .mat-toolbar {
-        max-width: 100%;
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
     &.sidenav-closed {
       .mat-toolbar {
         max-width: 100%;
@@ -48,6 +40,10 @@
 //////////////////////////////////////////////////////////////////////////////
 // Global classes
 //////////////////////////////////////////////////////////////////////////////
+
+.app-title{
+  margin-left: 10px;
+}
 
 .text-center {
   text-align: center !important;
