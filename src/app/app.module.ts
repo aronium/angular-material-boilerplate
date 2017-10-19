@@ -32,7 +32,7 @@ import { AppComponent } from './components/app/app.component';
 import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
-import { NavBarComponent } from './components/shared/nav-bar/nav-bar.component';
+import { NavBarComponent } from './components/shared/navbar/navbar.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserListComponent } from './components/users/list/user-list.component';
