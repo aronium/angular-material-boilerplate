@@ -41,6 +41,7 @@ import { ToolbarComponent } from './components/shared/toolbar/toolbar.component'
 import { HttpService } from './services';
 import { UserDetailsComponent } from './components/users/details/user-details.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const appRoutes: Routes = [
   {
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
           { path: 'users', component: UserListComponent },
           { path: 'users/new', component: UserDetailsComponent },
           { path: 'users/details/:id', component: UserDetailsComponent },
-          { path: 'settings', component: SettingsComponent }
+          { path: 'settings', component: SettingsComponent },
+          { path: 'profile', component: ProfileComponent }
       ]
   },
   {
@@ -83,7 +85,8 @@ const appRoutes: Routes = [
     UserListComponent,
     ToolbarComponent,
     UserDetailsComponent,
-    SettingsComponent
+    SettingsComponent,
+    ProfileComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

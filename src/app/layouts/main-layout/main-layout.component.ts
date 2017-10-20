@@ -17,7 +17,11 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router) { }
 
-  private getSidenavState(): boolean {
+  /**
+  * Gets current side nav mode for page refresh, if any.
+  * Sidenav mode is stored in localStorage for later use.
+  */
+  private wasSidenavOpen(): boolean {
     let savedState = localStorage.getItem("sidenavOpen");
 
     if (savedState) {
@@ -27,7 +31,10 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
     return true;
   }
 
-  private checkSidenavMode() {
+  /**
+  * Sets correct sidenav mode based on window size.
+  */
+  private setSidenavMode() {
     if (window.innerWidth < 768) {
       this.sidenavMode = 'over';
       this.isSidenavOpen = false;
@@ -36,12 +43,16 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
     }
     else {
       this.sidenavMode = 'side';
-      this.isSidenavOpen = this.getSidenavState();
+      this.isSidenavOpen = this.wasSidenavOpen();
       if (this.isSidenavOpen)
         this.sidenav.open();
     }
   }
 
+  /**
+  * Creates subscription to navigation change event.
+  * Used to toggle side menu if one is in "over" mode.
+  */
   private subscribeToRouteChangeEvent() {
     // Hide sidenav on route change if using 'over' mode
     this.navigationSubscription = this.router.events
@@ -52,22 +63,36 @@ export class MainLayoutComponent implements OnInit, OnDestroy {
       });
   }
 
+  /**
+  * Handes window resilze.
+  *
+  * @param event Event args.
+  */
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    this.checkSidenavMode();
+    this.setSidenavMode();
   }
 
+  /**
+  * Method executed on component initialization.
+  */
   ngOnInit() {
     this.subscribeToRouteChangeEvent();
-    this.checkSidenavMode();
+    this.setSidenavMode();
   }
 
+  /**
+  * Method executed on component destroy.
+  */
   ngOnDestroy(): void {
     if (this.navigationSubscription) {
       this.navigationSubscription.unsubscribe();
     }
   }
 
+  /**
+  * Toggles sidenav based on current sidenav settings.
+  */
   toggleSidenav() {
     if (this.sidenavMode === 'side') {
       this.sidenav.toggle();

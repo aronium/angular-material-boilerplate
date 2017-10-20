@@ -15,14 +15,18 @@ export class ToolbarComponent{
   @Output()
   toggleMenu = new EventEmitter();
 
-  constructor(private dialog: MatDialog){
+  constructor(private dialog: MatDialog){ }
 
-  }
-
+  /**
+  * Opens settings dialog.
+  */
   onOpenSettings(){
     this.dialog.open(SettingsComponent);
   }
 
+  /**
+  * Dispatch toggleMenu event.
+  */
   onToggleMenu(){
     this.toggleMenu.emit();
   }

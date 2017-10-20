@@ -11,6 +11,9 @@ export class ThemeService {
     { value: 'black', name: 'Black', cssClass: 'black-theme' }
   ];
 
+  /**
+  * Loads saved theme and sets required classes to body element.
+  */
   loadSavedTheme(){
     let theme = localStorage.getItem('theme');
     if(theme !== undefined){
@@ -22,6 +25,9 @@ export class ThemeService {
     }
   }
 
+  /**
+  * Gets current theme.
+  */
   currentTheme(){
     let storedTheme = localStorage.getItem('theme')
 
@@ -34,9 +40,13 @@ export class ThemeService {
     }
 
     return this.themes[0];
-
   }
 
+  /**
+  * Sets theme.
+  *
+  * @param theme Theme to use.
+  */
   setTheme(theme: any){
     let body = document.getElementsByTagName('body')[0];
     this.themes.forEach(theme => body.classList.remove(theme.cssClass));

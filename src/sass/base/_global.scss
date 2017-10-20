@@ -23,6 +23,21 @@
         max-width: 100%;
       }
     }
+
+    &.fixed-top{
+      .mat-toolbar{
+        width: 100%;
+        max-width: 100%!important;
+      }
+
+      .mat-sidenav{
+        margin-top: 65px;
+
+        .logo{
+          display: none;
+        }
+      }
+    }
   }
 
   .mat-toolbar {
