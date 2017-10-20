@@ -1,0 +1,33 @@
+@import '../themes/_theme.scss';
+
+.dark-theme{
+  &.theme-indicator{
+    color: #999999!important;
+  }
+
+  .mat-sidenav-container{
+    .mat-sidenav{
+      background: #263238!important;
+
+      .sidenav {
+        .logo{
+          h1{
+            border-bottom-width: 0;
+            color: #ffffff;
+          }
+        }
+        a{
+          color: #ffffff!important;
+
+          &.active,
+          &.active:hover,
+          &.active:focus,
+          &.active:active{
+            background: #455A64!important;
+            color: #ffffff!important;
+          }
+        }
+      }
+    }
+  }
+}

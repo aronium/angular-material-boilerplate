@@ -8,6 +8,7 @@ export class ThemeService {
     { value: 'light', name: 'Light', cssClass: 'light-theme' },
     { value: 'snow-white', name: 'Snow white', cssClass: 'snow-white-theme' },
     { value: 'mixed', name: 'Mixed', cssClass: 'mixed-theme' },
+    { value: 'Dark', name: 'Dark', cssClass: 'dark-theme' },
     { value: 'black', name: 'Black', cssClass: 'black-theme' }
   ];
 

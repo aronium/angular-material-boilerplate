@@ -48,10 +48,18 @@ $light-theme-border-color: rgba(black, 0.12);
     @include angular-material-theme($mixed-theme);
 }
 
-.black-theme{
-    $primary-dark: mat-palette($mat-blue-grey);
-    $accent-dark:  mat-palette($mat-blue-grey, 700);
+.dark-theme{
+    $primary-dark: mat-palette($mat-blue, 500);
+    $accent-dark:  mat-palette($mat-blue-grey, 900);
 
-    $black-theme: mat-dark-theme($primary-dark, $accent-dark);
+    $dark-theme:   mat-light-theme($primary-dark, $accent-dark);
+    @include angular-material-theme($dark-theme);
+}
+
+.black-theme{
+    $primary-black: mat-palette($mat-blue-grey);
+    $accent-black:  mat-palette($mat-blue-grey, 700);
+
+    $black-theme:  mat-dark-theme($primary-black, $accent-black);
     @include angular-material-theme($black-theme);
 }
