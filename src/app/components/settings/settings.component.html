@@ -1,13 +1,12 @@
 <h1 mat-dialog-title>Settings</h1>
 <div mat-dialog-content>
-  <h4>Selected theme - {{ selectedTheme.name }}</h4>
-  <!-- <mat-form-field>
+  <mat-form-field class="margin-bottom-20">
     <mat-select (change)="onThemeSelected($event.value)" [(ngModel)]="selectedTheme">
       <mat-option *ngFor="let theme of themes" [value]="theme">
         {{ theme.name }}
       </mat-option>
     </mat-select>
-  </mat-form-field> -->
+  </mat-form-field>
   <div class="margin-bottom-20">
     <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="selectedTheme">
       <mat-button-toggle [matTooltip]="theme.name" *ngFor="let theme of themes" [value]="theme" (click)="onThemeSelected(theme)">

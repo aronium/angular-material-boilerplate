@@ -24,7 +24,7 @@
       }
     }
 
-    &.fixed-top{
+    &.full-width{
       .mat-toolbar{
         width: 100%;
         max-width: 100%!important;
@@ -32,10 +32,6 @@
 
       .mat-sidenav{
         margin-top: 65px;
-
-        .logo{
-          display: none;
-        }
       }
     }
   }
