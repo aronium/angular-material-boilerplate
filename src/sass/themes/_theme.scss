@@ -1,11 +1,4 @@
-// Use the following palettes to build a custom theme:
-// https://github.com/angular/material2/blob/master/src/lib/core/theming/_palette.scss
-//
-// Theme is build using mixins defined in:
-// https://github.com/angular/material2/blob/master/src/lib/core/theming/_theming.scss
-
 @import '~@angular/material/theming';
-
 @include mat-core();
 
 // Define theme defaults
@@ -34,32 +27,39 @@ $light-theme-border-color: rgba(black, 0.12);
 
 .light-theme{
     $light-theme:       mat-light-theme($app-default, $app-default-accent, $app-light-warn);
+   
     @include angular-material-theme($light-theme);
 }
 
 .snow-white-theme{
     $snow-theme:       mat-light-theme($app-default, $app-default-accent, $app-light-warn);
+    
     @include angular-material-theme($snow-theme);
 }
 
 .mixed-theme{
     $app-mixed-accent: mat-palette($mat-light-blue, 700);
+    
     $mixed-theme:      mat-light-theme($app-default, $app-mixed-accent, $app-light-warn);
+    
     @include angular-material-theme($mixed-theme);
 }
 
 .dark-theme{
-    $primary-dark: mat-palette($mat-blue, 500);
-    $accent-dark:  mat-palette($mat-blue-grey, 900);
-
-    $dark-theme:   mat-light-theme($primary-dark, $accent-dark);
+    $primary-dark:     mat-palette($mat-blue, 500);
+    $accent-dark:      mat-palette($mat-blue-grey, 900);
+    $warn-dark:        mat-palette($mat-red, 800);
+    
+    $dark-theme:       mat-light-theme($primary-dark, $accent-dark, $warn-dark);
+    
     @include angular-material-theme($dark-theme);
 }
 
 .black-theme{
-    $primary-black: mat-palette($mat-blue-grey);
-    $accent-black:  mat-palette($mat-blue-grey, 700);
+    $primary-black:    mat-palette($mat-blue-grey);
+    $accent-black:     mat-palette($mat-blue-grey, 700);
 
-    $black-theme:  mat-dark-theme($primary-black, $accent-black);
+    $black-theme:      mat-dark-theme($primary-black, $accent-black);
+    
     @include angular-material-theme($black-theme);
 }

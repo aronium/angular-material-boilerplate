@@ -7,15 +7,9 @@
 
   .mat-sidenav-container{
     .mat-sidenav{
-      background: #263238!important;
+      background: #37474F!important;
 
       .sidenav {
-        .logo{
-          h1{
-            border-bottom-width: 0;
-            color: #ffffff;
-          }
-        }
         a{
           color: #ffffff!important;
 
@@ -23,7 +17,7 @@
           &.active:hover,
           &.active:focus,
           &.active:active{
-            background: #455A64!important;
+            background: #263238!important;
             color: #ffffff!important;
           }
         }

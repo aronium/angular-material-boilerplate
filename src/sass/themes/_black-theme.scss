@@ -1,45 +1,38 @@
 @import '../themes/_theme.scss';
 
-.black-theme{
-  &.theme-indicator{
-    color: #111111!important;
+.black-theme {
+  &.theme-indicator {
+    color: #111111 !important;
   }
 
-  .mat-sidenav-container{
-    background: #252525!important;
+  .mat-sidenav-container {
+    background: #252525 !important;
 
-    .mat-toolbar{
-      background: #222222!important;
+    .mat-toolbar {
+      background: #222222 !important;
       border-bottom: 1px solid $border-color;
     }
 
-    .mat-sidenav-content{
+    .mat-sidenav-content {
       .mat-card {
-        background: #313131!important;
+        background: #313131 !important;
       }
     }
 
-    .mat-sidenav{
-      background: #222222!important;
+    .mat-sidenav {
+      background: #222222 !important;
       border-right: 1px solid $border-color;
 
       .sidenav {
-
-        .logo{
-          h1{
-            border-bottom-color: $border-color;
-          }
-        }
-
-        a{
-          color: #ffffff!important;
+        a {
+          color: #ffffff !important;
 
           &.active,
           &.active:hover,
           &.active:focus,
-          &.active:active{
-            background: #1d1c1c!important;
-            color: #ffffff!important;
+          &.active:active {
+            background: #1d1c1c !important;
+            color: #ffffff !important;
           }
         }
       }

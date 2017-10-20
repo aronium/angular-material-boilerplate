@@ -2,32 +2,32 @@
   &.theme-indicator{
     color: rgb(3, 151, 236)!important;
   }
-  .mat-toolbar{
-    background: white!important;
-    color: #444444!important;
-    border-bottom: 1px solid $light-theme-border-color;
-  }
+  
+  .mat-sidenav-container{
+    .logo{
+      background-position-y: 0!important;
+    }
 
-  .mat-sidenav{
-    background: #0288D1!important;
+    .mat-toolbar{
+      background: white!important;
+      color: #444444!important;
+      border-bottom: 1px solid $light-theme-border-color;
+    }
 
-    .sidenav {
-      .logo{
-        h1{
-          color: #ffffff;
-          border-bottom-width: 0;
-        }
-      }
+    .mat-sidenav{
+      background: #0288D1!important;
 
-      a{
-        color: #ffffff!important;
-
-        &.active,
-        &.active:hover,
-        &.active:focus,
-        &.active:active{
-          background: #0277BD!important;
+      .sidenav {
+        a{
           color: #ffffff!important;
+
+          &.active,
+          &.active:hover,
+          &.active:focus,
+          &.active:active{
+            background: #0277BD!important;
+            color: #ffffff!important;
+          }
         }
       }
     }

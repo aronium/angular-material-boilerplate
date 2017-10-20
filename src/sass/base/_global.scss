@@ -16,6 +16,18 @@
       transition-timing-function: cubic-bezier(.25,.8,.25,1);
       // Set width based on sidenav width
       max-width: calc(100% - #{$sidenav-width});
+      
+      .logo{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 2px;
+        width: 125px;
+        height: 24px;
+        
+        background-image: url('/assets/logos.png');
+        background-repeat: no-repeat;
+        background-position-y: -50px;
+      }
     }
 
     &.sidenav-closed {
@@ -42,6 +54,9 @@
     top: 0;
     right: 0;
     z-index: 10;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 
   main {

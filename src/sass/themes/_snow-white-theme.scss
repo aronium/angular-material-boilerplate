@@ -26,6 +26,10 @@
       background: white!important;
       color: #444444!important;
       border-bottom: 1px solid $light-theme-border-color;
+
+      .logo{
+        background-position-y: 0!important;
+      }
     }
     .mat-sidenav{
       border-right: 1px solid $light-theme-border-color;
