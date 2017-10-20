@@ -30,4 +30,17 @@
       }
     }
   }
+
+  ///////////////////////////////////////////////
+  // Tables
+  //////////////////////////////////////////////
+  table{
+      &.table-bordered{
+          border: 1px solid $light-theme-border-color;
+
+          tr{
+              border-bottom: 1px solid $light-theme-border-color;
+          }
+      }
+  }
 }
