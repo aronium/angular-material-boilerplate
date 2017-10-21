@@ -51,14 +51,14 @@
         font-size: 20px;
 
         &.collapse{
-          -webkit-transform: rotate(90deg);
-          -moz-transform: rotate(90deg);
-          transform: rotate(90deg);
+          -webkit-transform: rotate(-180deg);
+          -moz-transform: rotate(-180deg);
+          transform: rotate(-180deg);
         }
       }
 
       ul{
-        text-indent:  12px;
+        text-indent:  22px;
         
         &.collapsed{
           transition: max-height 0.1s; 
