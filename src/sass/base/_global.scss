@@ -16,18 +16,6 @@
       transition-timing-function: cubic-bezier(.25,.8,.25,1);
       // Set width based on sidenav width
       max-width: calc(100% - #{$sidenav-width});
-      
-      .logo{
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 2px;
-        width: 125px;
-        height: 24px;
-        
-        background-image: url('/assets/logos.png');
-        background-repeat: no-repeat;
-        background-position-y: -50px;
-      }
     }
 
     &.sidenav-closed {
@@ -40,11 +28,29 @@
       .mat-toolbar{
         min-width: 100%;
         max-width: 100%!important;
+
+        // Set logo content and size on full width toobar
+        .logo{
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-top: 2px;
+          width: 125px;
+          height: 24px;
+          
+          background-image: url('/assets/logos.png');
+          background-repeat: no-repeat;
+          background-position-y: -50px;
+        }
       }
 
       .mat-sidenav{
         margin-top: 64px;
         z-index: 0;
+
+        .logo{
+          // Hide sidenav logo on full width toolbar
+          display: none;
+        }
       }
     }
   }

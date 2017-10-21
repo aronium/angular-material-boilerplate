@@ -4,18 +4,14 @@
     width: $sidenav-width !important;
 
     .logo{
-      img{
-        margin-top: 20px;
-        margin-bottom: 10px;
-      }
-
-      h1{
-        font-weight: 300;
-        margin-top: 14px;
-        margin-bottom: 2px;
-        padding-bottom: 16px;
-        border-bottom: 1px solid $border-color;
-      }
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 100px;
+      height: 100px;
+      
+      background-image: url('/assets/logos.png');
+      background-repeat: no-repeat;
+      background-position-y: -90px;
     }
 
     .mat-icon{
