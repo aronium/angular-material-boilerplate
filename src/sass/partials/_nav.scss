@@ -1,18 +1,24 @@
 @import '../themes/_theme.scss';
 
-.sidenav {
-    width: $sidenav-width !important;
-
-    .logo{
-      margin: 0 auto;
-      margin-top: 20px;
-      width: 100px;
-      height: 100px;
-      
-      background-image: url('/assets/logos.png');
-      background-repeat: no-repeat;
-      background-position-y: -90px;
+.mat-sidenav-container{
+  // If .full-width is not set on main container, add logo to sidenav
+  :not(.full-width){
+    .sidenav{
+      .logo{
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 100px;
+        height: 100px;
+        
+        background-image: url('/assets/logos.png');
+        background-repeat: no-repeat;
+        background-position-y: -90px;
+      }
     }
+  }
+
+  .sidenav {
+    width: $sidenav-width !important;
 
     .mat-icon{
       height: 22px;
@@ -68,3 +74,4 @@
       }
     }
   }
+}
