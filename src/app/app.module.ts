@@ -43,6 +43,7 @@ import { UserDetailsComponent } from './components/users/details/user-details.co
 import { SettingsComponent } from './components/settings/settings.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NgInitDirective } from './directives/ng-init.directive';
+import { LayoutComponent } from './components/layout/layout.component';
 
 const appRoutes: Routes = [
   {
@@ -56,7 +57,8 @@ const appRoutes: Routes = [
           { path: 'users/new', component: UserDetailsComponent },
           { path: 'users/details/:id', component: UserDetailsComponent },
           { path: 'settings', component: SettingsComponent },
-          { path: 'profile', component: ProfileComponent }
+          { path: 'profile', component: ProfileComponent },
+          { path: 'layout', component: LayoutComponent }
       ]
   },
   {
@@ -88,7 +90,8 @@ const appRoutes: Routes = [
     UserDetailsComponent,
     SettingsComponent,
     ProfileComponent,
-    NgInitDirective
+    NgInitDirective,
+    LayoutComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
