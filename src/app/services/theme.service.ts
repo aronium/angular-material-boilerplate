@@ -24,17 +24,23 @@ export class ThemeService {
         body.classList.add(selectedTheme.cssClass);
       }
     }
+
+    // Set toolbar width
+    let fullWidthSaved = localStorage.getItem('fullWidth');
+    if(fullWidthSaved){
+      this.setFullWidth(JSON.parse(fullWidthSaved));
+    }
   }
 
   /**
   * Gets current theme.
   */
   currentTheme(){
-    let storedTheme = localStorage.getItem('theme')
+    let storedTheme = localStorage.getItem('theme');
 
     if(storedTheme != null){
         let tempTheme = JSON.parse(storedTheme);
-        let theme = this.themes.filter(theme => theme.value && theme.value === tempTheme.value)
+        let theme = this.themes.filter(theme => theme.value && theme.value === tempTheme.value);
 
         if(theme != null)
           return theme[0];
@@ -56,6 +62,34 @@ export class ThemeService {
     if(theme.cssClass){
       localStorage.setItem('theme', JSON.stringify(theme));
       body.classList.add(theme.cssClass);
+    }
+  }
+
+  isFullWidth(): boolean{
+    let fullWidthSaved = localStorage.getItem('fullWidth');
+    if(fullWidthSaved){
+      return JSON.parse(fullWidthSaved) as boolean;
+    }
+    else{
+      let body = document.getElementsByTagName('body')[0]; 
+      return body.classList.contains('full-width');   
+    }
+  }
+
+  /**
+   * Sets toolbar full width options.
+   * 
+   * @param fullWidth Indicates whether toolbar is displayed in full width.
+   */
+  setFullWidth(fullWidth: boolean){
+    let body = document.getElementsByTagName('body')[0];
+    localStorage.setItem('fullWidth', JSON.stringify(fullWidth));
+
+    if(fullWidth){
+      body.classList.add('full-width');
+    }
+    else{
+      body.classList.remove('full-width');
     }
   }
 }

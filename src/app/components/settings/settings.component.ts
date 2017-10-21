@@ -14,10 +14,13 @@ export class SettingsComponent {
   themes: Array<any> = [];
 
   selectedTheme: any;
+  isFullWidth: boolean = true;
 
   constructor(private themeService: ThemeService, private snackBar: MatSnackBar) {
     this.themes = themeService.themes;
     this.selectedTheme = themeService.currentTheme();
+
+    this.isFullWidth = themeService.isFullWidth();
   }
 
   onThemeSelected(theme: any){
@@ -26,5 +29,9 @@ export class SettingsComponent {
     this.snackBar.open(`Theme changed to "${theme.name}"`, null, {
       duration: 3000,
     });
+  }
+
+  setFullWidth(isFullWidth: boolean){
+    this.themeService.setFullWidth(isFullWidth);
   }
 }

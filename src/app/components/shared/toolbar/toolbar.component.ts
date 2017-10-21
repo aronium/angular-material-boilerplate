@@ -1,7 +1,4 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { MatDialog } from '@angular/material';
-
-import { SettingsComponent } from '../../settings/settings.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -15,14 +12,7 @@ export class ToolbarComponent{
   @Output()
   toggleMenu = new EventEmitter();
 
-  constructor(private dialog: MatDialog){ }
-
-  /**
-  * Opens settings dialog.
-  */
-  onOpenSettings(){
-    this.dialog.open(SettingsComponent);
-  }
+  constructor(){ }
 
   /**
   * Dispatch toggleMenu event.

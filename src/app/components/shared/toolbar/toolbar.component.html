@@ -15,9 +15,6 @@
     <button class="profile-menu-button" mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon aria-label="Menu">more_vert</mat-icon>
     </button>
-    <button mat-icon-button (click)="onOpenSettings()">
-      <mat-icon aria-label="Settings">palette</mat-icon>
-    </button>
 
     <mat-menu #menu="matMenu">
       <mat-card>
@@ -25,6 +22,7 @@
         <mat-card-subtitle>john.doe@example.com</mat-card-subtitle>
       </mat-card>
       <button mat-menu-item routerLink="/profile"><mat-icon>person</mat-icon>&nbsp;Profile</button>
+      <button mat-menu-item routerLink="/settings"><mat-icon>settings</mat-icon>&nbsp;Settings</button>
       <button mat-menu-item><mat-icon>lock</mat-icon>&nbsp;Change password</button>
       <button mat-menu-item routerLink="/login"><mat-icon>power_settings_new</mat-icon>&nbsp;Logout</button>
     </mat-menu>

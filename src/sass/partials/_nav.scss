@@ -1,6 +1,6 @@
 @import '../themes/_theme.scss';
 
-.mat-sidenav-container{
+body{
   // If .full-width is not set on main container, add logo to sidenav
   :not(.full-width){
     .sidenav{
@@ -16,6 +16,9 @@
       }
     }
   }
+}
+
+.mat-sidenav-container{
 
   .sidenav {
     width: $sidenav-width !important;
