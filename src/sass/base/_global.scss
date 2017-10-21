@@ -6,33 +6,35 @@
 //////////////////////////////////////////////////////////////////////////////
 
 body{
-  &.full-width{
-    .mat-sidenav-container{
-      .mat-toolbar{
-        min-width: 100%;
-        max-width: 100%!important;
+  @media(min-width: 768px){
+    &.full-width{
+      .mat-sidenav-container{
+        .mat-toolbar{
+          min-width: 100%;
+          max-width: 100%!important;
 
-        // Set logo content and size on full width toobar
-        .logo{
-          margin-left: 10px;
-          margin-right: 10px;
-          margin-top: 2px;
-          width: 125px;
-          height: 24px;
-          
-          background-image: url('/assets/logos.png');
-          background-repeat: no-repeat;
-          background-position-y: -50px;
+          // Set logo content and size on full width toobar
+          .logo{
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 2px;
+            width: 125px;
+            height: 24px;
+            
+            background-image: url('/assets/logos.png');
+            background-repeat: no-repeat;
+            background-position-y: -50px;
+          }
         }
-      }
 
-      .mat-sidenav{
-        margin-top: 64px;
-        z-index: 0;
+        .mat-sidenav{
+          margin-top: 64px;
+          z-index: 0;
 
-        .logo{
-          // Hide sidenav logo on full width toolbar
-          display: none;
+          .logo{
+            // Hide sidenav logo on full width toolbar
+            display: none;
+          }
         }
       }
     }
@@ -196,11 +198,21 @@ dl {
   }
 }
 
-.theme-indicator{
-  color: currentColor;
-  border: 2px solid currentColor;
-  border-radius: 50%;
+.theme-selector-button{
+  line-height: 30px;
+  padding: 0 7px;
+
+  .theme-indicator{
+    color: currentColor;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+  
+    height: 16px!important;
+    width: 16px!important;
+    font-size: 16px!important;
+  }
 }
+
 
 .loading {
   text-align: center;

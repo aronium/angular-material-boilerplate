@@ -6,16 +6,16 @@
 </section>
 
 <section>
-  <h3 class="sub-title">Theme</h3>
-  <mat-form-field class="margin-bottom-20">
+  <h3 class="sub-title">Theme ({{ selectedTheme.name }})</h3>
+  <!-- <mat-form-field class="margin-bottom-20">
     <mat-select (change)="onThemeSelected($event.value)" [(ngModel)]="selectedTheme">
       <mat-option *ngFor="let theme of themes" [value]="theme">
         {{ theme.name }}
       </mat-option>
     </mat-select>
-  </mat-form-field>
+  </mat-form-field> -->
   <div class="margin-bottom-20">
-    <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="selectedTheme">
+    <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="selectedTheme" class="theme-selector-button">
       <mat-button-toggle [matTooltip]="theme.name" *ngFor="let theme of themes" [value]="theme" (click)="onThemeSelected(theme)">
         <mat-icon class="theme-indicator" [ngClass]="theme.cssClass">fiber_manual_record</mat-icon>
       </mat-button-toggle>
