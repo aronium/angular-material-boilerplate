@@ -42,6 +42,7 @@ import { HttpService } from './services';
 import { UserDetailsComponent } from './components/users/details/user-details.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { NgInitDirective } from './directives/ng-init.directive';
 
 const appRoutes: Routes = [
   {
@@ -86,7 +87,8 @@ const appRoutes: Routes = [
     ToolbarComponent,
     UserDetailsComponent,
     SettingsComponent,
-    ProfileComponent
+    ProfileComponent,
+    NgInitDirective
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

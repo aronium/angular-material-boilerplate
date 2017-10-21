@@ -18,6 +18,12 @@
       }
     }
 
+    .mat-icon{
+      height: 22px;
+      width: 22px;
+      font-size: 22px;
+    }
+
     a{
       font-size: 14px!important;
 
@@ -30,6 +36,39 @@
       &.active:focus,
       &.active:active{
         background-color: $accent-color!important;
+      }
+    }
+
+    ul, li{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .expand-icon{
+        transition: transform 500ms ease;
+        height: 20px;
+        width: 20px;
+        font-size: 20px;
+
+        &.collapse{
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
+      }
+
+      ul{
+        text-indent:  12px;
+        
+        &.collapsed{
+          transition: max-height 0.1s; 
+          max-height: 0;
+          overflow: hidden;
+        }
+        &.expanded{
+          transition: max-height 0.5s; 
+          max-height: 100vh;
+        }
       }
     }
   }
