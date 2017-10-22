@@ -1,0 +1,26 @@
+.home{
+
+    .chart{
+        padding: 16px;
+
+        .mat-card-title {
+            font-size: 18px;
+        }
+    }
+
+    canvas {
+        width: 100% !important;
+    }
+
+    .first-chart{
+        canvas {
+            height: 150px;
+        }
+    }
+
+    .horizontal-bar{
+        canvas {
+            height: 400px;
+        }
+    }
+}

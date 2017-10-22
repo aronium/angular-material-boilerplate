@@ -28,6 +28,8 @@ import {
   MatDialogModule,
   MatSnackBarModule } from '@angular/material';
 
+import { ChartsModule } from 'ng2-charts';
+
 import { AppComponent } from './components/app/app.component';
 import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.component';
 import { HomeComponent } from './components/home/home.component';
@@ -118,7 +120,9 @@ const appRoutes: Routes = [
     MatRadioModule,
     MatListModule,
     MatGridListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+
+    ChartsModule
   ],
   providers: [
     HttpService

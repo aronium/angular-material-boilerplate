@@ -9,13 +9,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading {
+      text-align: center;
+      position: fixed;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+    }
+
+    .spinner{
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      border: 0.25rem solid #e7e7e7;
+      border-top-color: rgb(17, 126, 199);
+      -webkit-animation: spin 1s infinite linear;
+      animation: spin 1s infinite linear;
+    }
+  </style>
 </head>
 
 <body class="full-width">
   <app-root>
     <div class="loading">
-      <img src="/assets/logo.png" class="margin-top-20" />
-      <div>Loading... Please wait...</div>
+      <div class="spinner"></div>
     </div>
   </app-root>
 </body>
