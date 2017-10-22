@@ -7,32 +7,40 @@
 <button mat-raised-button color="warn">
   <mat-icon>delete</mat-icon>
 </button>
-<div class="table-responsive margin-top-10">
-  <table class="table-bordered">
-    <thead>
-      <tr>
-        <th width="30">
-          <mat-checkbox (click)="checkAll()"></mat-checkbox>
-        </th>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Username</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users">
-        <td width="30">
-          <mat-checkbox [checked]="user.selected"></mat-checkbox>
-        </td>
-        <td>{{user.id}}</td>
-        <td><a routerLink="/users/details/{{user.id}}">{{user.name}}</a></td>
-        <td>{{user.username}}</td>
-        <td>{{user.email}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+<mat-card class="margin-top-10">
+  <mat-card-content>
+    <mat-card-title>User list</mat-card-title>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th width="30">
+              <mat-checkbox (click)="checkAll()"></mat-checkbox>
+            </th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td width="30">
+              <mat-checkbox [checked]="user.selected"></mat-checkbox>
+            </td>
+            <td>{{user.id}}</td>
+            <td>
+              <a routerLink="/users/details/{{user.id}}">{{user.name}}</a>
+            </td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>
 
 <button mat-fab class="fixed-bottom-right" routerLink="/users/new">
   <mat-icon aria-label="Add user">add</mat-icon>

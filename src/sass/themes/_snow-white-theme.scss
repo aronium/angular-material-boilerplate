@@ -1,3 +1,5 @@
+@import '../base/_variables.scss';
+
 .snow-white-theme{
 
   &.theme-indicator{
@@ -11,14 +13,14 @@
     .mat-toolbar{
       background: white!important;
       color: #444444!important;
-      border-bottom: 1px solid $light-theme-border-color;
+      border-bottom: 1px solid $light-border-color;
 
       .logo{
         background-position-y: 0!important;
       }
     }
     .mat-sidenav{
-      border-right: 1px solid $light-theme-border-color;
+      border-right: 1px solid $light-border-color;
 
       .sidenav {
         a{
@@ -40,12 +42,12 @@
   // Tables
   //////////////////////////////////////////////
   table{
-      &.table-bordered{
-          border: 1px solid $light-theme-border-color;
-
-          tr{
-              border-bottom: 1px solid $light-theme-border-color;
-          }
-      }
+    tr{
+        border-bottom: 1px solid $light-border-color;
+    }
+    
+    &.table-bordered{
+        border: 1px solid $light-border-color;
+    }
   }
 }

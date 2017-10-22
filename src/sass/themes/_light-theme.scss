@@ -1,3 +1,5 @@
+@import '../base/_variables.scss';
+
 .light-theme{
   &.theme-indicator{
     color: #cccccc!important;
@@ -25,12 +27,12 @@
   // Tables
   //////////////////////////////////////////////
   table{
-      &.table-bordered{
-          border: 1px solid $light-theme-border-color;
+    tr{
+        border-bottom: 1px solid $light-border-color;
+    }
 
-          tr{
-              border-bottom: 1px solid $light-theme-border-color;
-          }
-      }
+    &.table-bordered{
+      border: 1px solid $light-border-color;
+    }
   }
 }

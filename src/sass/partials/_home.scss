@@ -1,4 +1,19 @@
+@import '../mixins/flex.scss';
+
 .home{
+    .info-card{
+        border-radius: 0;
+
+        .mat-card-title{
+            font-size: 18px;
+        }
+        .mat-card-content{
+            margin-bottom: 0;
+        }
+        .info-card-content{
+            font-size: 48px;
+        }
+    }
 
     .chart{
         padding: 16px;
@@ -14,13 +29,47 @@
 
     .first-chart{
         canvas {
-            height: 150px;
+            min-height: 150px;
+            max-height: 150px;
         }
     }
 
     .horizontal-bar{
         canvas {
-            height: 400px;
+            min-height: 400px;
+            max-height: 400px;
+        }
+    }
+
+    .pie-charts{
+        canvas {
+            min-height: 160px;
+            max-height: 160px;
+        }
+    }
+
+    .progress-metrics{
+        h3{
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        .progress-wrapper {
+            position: relative;
+            margin: 20px auto;
+            font-size: 24px;
+            max-width: 160px;
+
+            .progress-label {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                -webkit-transform: translate(-50%,-50%);
+                -moz-transform: translate(-50%,-50%);
+                color: currentColor;
+                opacity: 0.3;
+            }
         }
     }
 }

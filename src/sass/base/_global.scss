@@ -132,8 +132,14 @@ section {
 
 .fixed-bottom-right {
   position: fixed !important;
-  bottom: 20px;
-  right: 20px;
+  @media(min-width:768px){
+    bottom: 24px;
+    right: 32px;
+  }
+  @media(max-width:767px){
+    bottom: 20px;
+    right: 30px;
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////

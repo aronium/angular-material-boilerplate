@@ -30,10 +30,10 @@
   //////////////////////////////////////////////
   table{
       &.table-bordered{
-          border: 1px solid $light-theme-border-color;
+          border: 1px solid $light-border-color;
 
           tr{
-              border-bottom: 1px solid $light-theme-border-color;
+              border-bottom: 1px solid $light-border-color;
           }
       }
   }

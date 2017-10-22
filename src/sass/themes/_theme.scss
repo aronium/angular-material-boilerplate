@@ -23,7 +23,6 @@ $primary-color:         mat-color($primary);
 $border-color:          mat-color($background, card);
 
 $app-light-warn:        mat-palette($mat-red, A700);
-$light-theme-border-color: rgba(0,0,0,0.12);
 
 .light-theme{
     $light-theme:       mat-light-theme($app-default, $app-default-accent, $app-light-warn);

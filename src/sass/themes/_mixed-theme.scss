@@ -1,3 +1,5 @@
+@import '../base/_variables.scss';
+
 .mixed-theme{
   &.theme-indicator{
     color: rgb(3, 151, 236)!important;
@@ -7,7 +9,7 @@
     .mat-toolbar{
       background: white!important;
       color: #444444!important;
-      border-bottom: 1px solid $light-theme-border-color;
+      border-bottom: 1px solid $light-border-color;
       
       .logo{
         background-position-y: 0!important;
@@ -41,12 +43,12 @@
   // Tables
   //////////////////////////////////////////////
   table{
-      &.table-bordered{
-          border: 1px solid $light-theme-border-color;
-
-          tr{
-              border-bottom: 1px solid $light-theme-border-color;
-          }
-      }
+    tr{
+        border-bottom: 1px solid $light-border-color;
+    }
+    
+    &.table-bordered{
+      border: 1px solid $light-border-color;
+    }
   }
 }

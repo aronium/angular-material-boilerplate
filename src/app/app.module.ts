@@ -29,6 +29,7 @@ import {
   MatSnackBarModule } from '@angular/material';
 
 import { ChartsModule } from 'ng2-charts';
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
 
 import { AppComponent } from './components/app/app.component';
 import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.component';
@@ -122,7 +123,8 @@ const appRoutes: Routes = [
     MatGridListModule,
     MatSnackBarModule,
 
-    ChartsModule
+    ChartsModule,
+    RoundProgressModule
   ],
   providers: [
     HttpService

@@ -27,12 +27,12 @@ table {
         vertical-align: top;
     }
 
+    tr{
+        border-bottom: 1px solid $border-color;
+    }
+   
     &.table-bordered{
         border: 1px solid $border-color;
-
-        tr{
-            border-bottom: 1px solid $border-color;
-        }
     }
 }
 
@@ -41,5 +41,11 @@ table {
         display: block;
         width: 100%;
         overflow-x: auto;
+
+        tr{
+            td{
+                white-space: nowrap;            
+            }
+        }
     }
 }
