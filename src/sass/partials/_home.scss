@@ -5,7 +5,8 @@ $info-box-height: 90px;
 .home{
     .info-card{
 
-        // background-color: #607d8b;
+        background-color: #607d8b !important;
+        color: #ffffff;
         padding: 0;
 
         &.info-card-link{
@@ -13,8 +14,8 @@ $info-box-height: 90px;
         }
 
         .info-card-icon{
-            //color: #607d8b;
-            //background-color: #455a64;
+            color: #607d8b;
+            background-color: #455a64;
             border-radius: 2px 0 0 2px;
 
             display: block;
@@ -27,7 +28,7 @@ $info-box-height: 90px;
             .mat-icon{
                 height: $info-box-height;
                 width: $info-box-height;
-                font-size: 56px;
+                font-size: 48px;
                 line-height: $info-box-height;
             }
         }
@@ -52,29 +53,29 @@ $info-box-height: 90px;
         }
 
         &.info-card-green{
-            // background-color: #4caf50;
+            background-color: #4caf50 !important;
 
             .info-card-icon{
-                color: #43A047;
-                // background-color: #43a047;
+                color: #4caf50;
+                background-color: #43A047;
             }
         }
 
         &.info-card-red{
-            // background-color: #e53935;
+            background-color: #e53935 !important;
 
             .info-card-icon{
                 color: #E53935;
-                // background-color: #d32f2f;
+                background-color: #d32f2f;
             }
         }
 
         &.info-card-blue{
-            // background-color: #039be5;
+            background-color: #039be5 !important;
 
             .info-card-icon{
-                color: #1E88E5;
-                // background-color: #0288d1;
+                color: #29B6F6;
+                background-color: #0288d1;
             }
         }
     }
