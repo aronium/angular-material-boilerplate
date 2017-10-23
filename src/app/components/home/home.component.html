@@ -4,7 +4,7 @@
 
   <section class="info-cards">
     <div class="flex-container">
-      <div class="col info-card">
+      <mat-card class="col info-card">
         <div class="info-card-icon">
           <mat-icon>supervisor_account</mat-icon>
         </div>
@@ -12,9 +12,9 @@
           <h3>2345</h3>
           Users
         </div>
-      </div>
+      </mat-card>
 
-      <div class="col info-card info-card-green">
+      <mat-card class="col info-card info-card-green">
         <div class="info-card-icon">
           <mat-icon>update</mat-icon>
         </div>
@@ -22,9 +22,9 @@
           <h3>456</h3>
           Invited
         </div>
-      </div>
+      </mat-card>
 
-      <div class="col info-card info-card-red">
+      <mat-card class="col info-card info-card-red info-card-link" routerLink="/users">
         <div class="info-card-icon">
           <mat-icon>notifications_active</mat-icon>
         </div>
@@ -32,9 +32,9 @@
           <h3>123</h3>
           Leads
         </div>
-      </div>
+      </mat-card>
 
-      <a class="col info-card info-card-blue" routerLink="/dashboard">
+      <mat-card class="col info-card info-card-blue info-card-link" routerLink="/users">
         <div class="info-card-icon">
           <mat-icon>directions_walk</mat-icon>
         </div>
@@ -42,7 +42,7 @@
           <h3>56</h3>
           Purchase
         </div>
-      </a>
+      </mat-card>
     </div>
   </section>
 

@@ -20,7 +20,7 @@ body{
             margin-top: 2px;
             width: 125px;
             height: 24px;
-            
+
             background-image: url('/assets/logos.png');
             background-repeat: no-repeat;
             background-position-y: -50px;
@@ -42,6 +42,11 @@ body{
 }
 
 .mat-sidenav-container {
+
+  .mat-card-title{
+    font-family: $heading-font-family;
+    font-weight: 300;
+  }
 
   @media(min-width: 768px) {
 
@@ -95,12 +100,14 @@ body{
 }
 
 .title{
+    font-family: $heading-font-family;
     font-size: 28px;
     font-weight: 300;
     margin-top: 0;
 }
 
 .sub-title{
+    font-family: $heading-font-family;
     font-size: 22px;
     font-weight: 300;
 }
