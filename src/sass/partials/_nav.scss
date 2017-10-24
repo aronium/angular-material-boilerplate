@@ -1,5 +1,7 @@
 @import '../themes/_theme.scss';
 
+$expand-icon-size: 16px;
+
 body{
   // If .full-width is not set on main container, add logo to sidenav
   :not(.full-width){
@@ -50,15 +52,24 @@ body{
       margin: 0;
 
       .expand-icon{
-        transition: transform 500ms ease;
-        height: 20px;
-        width: 20px;
-        font-size: 20px;
+        transition: all 500ms ease;
+        height: $expand-icon-size;
+        width: $expand-icon-size;
+        font-size: $expand-icon-size;
+
+        &::after{
+          content: 'add';
+        }
 
         &.collapse{
-          -webkit-transform: rotate(-180deg);
-          -moz-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+          // Using expand_more icon with rotation
+          // -webkit-transform: rotate(-180deg);
+          // -moz-transform: rotate(-180deg);
+          // transform: rotate(-180deg);
+
+          &::after{
+            content: 'remove';
+          }
         }
       }
 
@@ -66,13 +77,17 @@ body{
         text-indent:  22px;
         
         &.collapsed{
-          transition: max-height 0.1s; 
-          max-height: 0;
-          overflow: hidden;
+          display: none;
+          
+          // transition: max-height 0.1s; 
+          // max-height: 0;
+          // overflow: hidden;
         }
         &.expanded{
-          transition: max-height 0.5s; 
-          max-height: 100vh;
+          display: block;
+          
+          // transition: max-height 0.5s; 
+          // max-height: 100vh;
         }
       }
     }
