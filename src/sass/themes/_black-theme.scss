@@ -16,9 +16,12 @@
     .mat-sidenav-content {
       .mat-card {
         background: #313131 !important;
+    
+        .info-card-icon{
+            background-color: inherit !important;
+          }
       }
     }
-
     .mat-sidenav {
       background: #222222 !important;
       border-right: 1px solid $border-color;
