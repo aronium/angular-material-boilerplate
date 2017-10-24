@@ -1,12 +1,12 @@
 <h1 class="title">Settings</h1>
 
 <section>
-  <h3 class="sub-title">Toolbar layout</h3>
+  <h2>Toolbar layout</h2>
   <mat-slide-toggle (change)="setFullWidth($event.checked)" [checked]="isFullWidth">Full width</mat-slide-toggle>
 </section>
 
 <section>
-  <h3 class="sub-title">Theme ({{ selectedTheme.name }})</h3>
+  <h2>Theme ({{ selectedTheme.name }})</h2>
   <!-- <mat-form-field class="margin-bottom-20">
     <mat-select (change)="onThemeSelected($event.value)" [(ngModel)]="selectedTheme">
       <mat-option *ngFor="let theme of themes" [value]="theme">
