@@ -27,7 +27,7 @@ export class SettingsComponent {
     this.themeService.setTheme(theme);
 
     this.snackBar.open(`Theme changed to "${theme.name}"`, null, {
-      duration: 3000,
+      duration: 3000
     });
   }
 
