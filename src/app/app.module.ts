@@ -27,6 +27,7 @@ import {
   MatListModule,
   MatCardModule,
   MatDialogModule,
+  MatTabsModule,
   MatSnackBarModule } from '@angular/material';
 
 import { ChartsModule } from 'ng2-charts';
@@ -124,6 +125,7 @@ const appRoutes: Routes = [
     MatGridListModule,
     MatSnackBarModule,
     MatProgressBarModule,
+    MatTabsModule,
 
     ChartsModule,
     RoundProgressModule

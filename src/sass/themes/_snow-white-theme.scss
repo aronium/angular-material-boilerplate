@@ -1,5 +1,7 @@
 @import '../base/_variables.scss';
 
+$foreground: #444444;
+
 .snow-white-theme{
 
   &.theme-indicator{
@@ -12,13 +14,27 @@
 
     .mat-toolbar{
       background: white!important;
-      color: #444444!important;
+      color: $foreground!important;
       border-bottom: 1px solid $light-border-color;
 
       .logo{
         background-position-y: 0!important;
       }
     }
+
+    .mat-sidenav-content{
+      .mat-card{
+        &.info-card{
+          background-color: inherit !important;
+          color: inherit !important;
+
+          .info-card-icon{
+            background-color: inherit !important;
+          }
+        }
+      }
+    }
+
     .mat-sidenav{
       border-right: 1px solid $light-border-color;
 
@@ -45,7 +61,7 @@
     tr{
         border-bottom: 1px solid $light-border-color;
     }
-    
+
     &.table-bordered{
         border: 1px solid $light-border-color;
     }
