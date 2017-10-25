@@ -144,7 +144,7 @@
     </svg>
   </section>
 
-  <button mat-fab class="fixed-bottom-right">
-    <mat-icon aria-label="Refresh">cached</mat-icon>
+  <button mat-fab class="fixed-bottom-right" (click)="onRefresh()">
+    <mat-icon [ngClass]="{'spin-reverse':loading}" aria-label="Refresh">cached</mat-icon>
   </button>
 </div>

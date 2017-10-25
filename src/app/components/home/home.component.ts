@@ -9,6 +9,8 @@ import { ExampleDialogComponent } from '../../dialogs/example-dialog/example-dia
 })
 export class HomeComponent {
 
+  loading: boolean = false;
+
   barChartData: Array<any> = [[27, 33, 32, 34, 48, 42, 30, 37, 23, 33, 6, 7, 9, 17, 7, 10, 10, 10, 16, 6, 9, 18, 24, 8, 11, 10, 23, 31, 22, 26]];
   barChartLabels: Array<any> = ["Fri 01", "Sat 02", "Sun 03", "Mon 04", "Tue 05", "Wed 06", "Thu 07", "Fri 08", "Sat 09", "Sun 10", "Mon 11", "Tue 12", "Wed 13", "Thu 14", "Fri 15", "Sat 16", "Sun 17", "Mon 18", "Tue 19", "Wed 20", "Thu 21", "Fri 22", "Sat 23", "Sun 24", "Mon 25", "Tue 26", "Wed 27", "Thu 28", "Fri 29", "Sat 30"];
   barChartColors = [{ backgroundColor: 'rgba(0, 156, 228, 0.80)' }]
@@ -55,5 +57,13 @@ export class HomeComponent {
 
   openDialog(): void {
     this.dialog.open(ExampleDialogComponent);
+  }
+
+  onRefresh(){
+    this.loading = true;
+
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
   }
 }

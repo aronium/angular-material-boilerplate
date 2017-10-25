@@ -15,9 +15,19 @@ export class UserListComponent implements OnInit {
   constructor(private service: UserService) { }
 
   ngOnInit() {
+    this.loadUsers();
+  }
+
+  private loadUsers(): void{
     this.service.getUsers().subscribe(data => {
       this.users = data
     });
+  }
+
+  onRefresh(){
+    this.users = null;
+
+    this.loadUsers();
   }
 
   checkAll() {

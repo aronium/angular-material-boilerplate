@@ -23,6 +23,7 @@ import {
   MatSelectModule,
   MatRadioModule,
   MatGridListModule,
+  MatProgressBarModule,
   MatListModule,
   MatCardModule,
   MatDialogModule,
@@ -122,6 +123,7 @@ const appRoutes: Routes = [
     MatListModule,
     MatGridListModule,
     MatSnackBarModule,
+    MatProgressBarModule,
 
     ChartsModule,
     RoundProgressModule
