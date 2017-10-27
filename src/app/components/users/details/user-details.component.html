@@ -1,7 +1,7 @@
 <button mat-raised-button routerLink="/users">
   <mat-icon>arrow_back</mat-icon> Back to list
 </button>
-<button mat-raised-button>
+<button mat-raised-button routerLink="/users/edit/{{user?.id}}">
   <mat-icon aria-label="Edit">edit</mat-icon>
 </button>
 <button mat-raised-button color="warn">
@@ -36,10 +36,10 @@
           <dl class="dl-horizontal">
             <dt>Company name</dt>
             <dd>{{ user.company.name }}</dd>
-    
+
             <dt>Additional data</dt>
             <dd>{{ user.company.catchPhrase }}</dd>
-    
+
             <dt>Product search type
               </dt>
             <dd>{{ user.company.bs }}</dd>
@@ -48,6 +48,6 @@
       </mat-card>
 </section>
 
-<button mat-fab class="fixed-bottom-right" routerLink="/users/new">
+<button mat-fab class="fixed-bottom-right" routerLink="/users/edit/{{user?.id}}">
   <mat-icon aria-label="Edit">edit</mat-icon>
 </button>

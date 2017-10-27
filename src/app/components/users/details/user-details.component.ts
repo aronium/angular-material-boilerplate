@@ -9,16 +9,12 @@ import { UserService } from '../services';
   providers: [ UserService ]
 })
 export class UserDetailsComponent implements OnInit {
-  private sub: any;
-  private service: UserService;
   user: any;
-  
-  constructor(private route: ActivatedRoute, service: UserService) {
-    this.service = service;
-}
+
+  constructor(private route: ActivatedRoute, private service: UserService) { }
 
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
+    this.route.params.subscribe(params => {
         let id = params['id'];
         this.getUser(id);
     });
@@ -27,5 +23,4 @@ export class UserDetailsComponent implements OnInit {
   private getUser(id: any){
     this.service.getUser(id).subscribe(data => this.user = data);
   }
-
 }

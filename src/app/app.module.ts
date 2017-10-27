@@ -49,6 +49,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NgInitDirective } from './directives/ng-init.directive';
 import { LayoutComponent } from './components/layout/layout.component';
+import { CreateEditUserComponent } from './components/users/shared/create-edit-user/create-edit-user.component';
 
 const appRoutes: Routes = [
   {
@@ -59,7 +60,8 @@ const appRoutes: Routes = [
           { path: '', pathMatch: 'full', redirectTo: '/home' },
           { path: 'home', component: HomeComponent },
           { path: 'users', component: UserListComponent },
-          { path: 'users/new', component: UserDetailsComponent },
+          { path: 'users/new', component: CreateEditUserComponent },
+          { path: 'users/edit/:id', component: CreateEditUserComponent },
           { path: 'users/details/:id', component: UserDetailsComponent },
           { path: 'settings', component: SettingsComponent },
           { path: 'profile', component: ProfileComponent },
@@ -96,7 +98,8 @@ const appRoutes: Routes = [
     SettingsComponent,
     ProfileComponent,
     NgInitDirective,
-    LayoutComponent
+    LayoutComponent,
+    CreateEditUserComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

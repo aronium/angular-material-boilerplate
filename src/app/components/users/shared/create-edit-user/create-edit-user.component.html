@@ -1,0 +1,25 @@
+<h1 class="title">{{ editMode == 0 ? 'Add new user' : 'Edit user details' }}</h1>
+
+<section>
+  <button mat-raised-button routerLink="/users">
+    <mat-icon>arrow_back</mat-icon> Back to list
+  </button>
+  <button mat-raised-button color="primary" (click)="onSave()">
+    <mat-icon>done</mat-icon> Save
+  </button>
+</section>  
+
+<section *ngIf="user">
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="user.name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Email" [(ngModel)]="user.email">
+  </mat-form-field>
+
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Phone" [(ngModel)]="user.phone">
+    </mat-form-field>
+  </div>
+</section>
