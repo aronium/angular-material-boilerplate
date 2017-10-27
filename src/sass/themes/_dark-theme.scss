@@ -1,4 +1,4 @@
-@import '../themes/_theme.scss';
+@import '../base/_variables.scss';
 
 .dark-theme{
   &.theme-indicator{
@@ -25,16 +25,17 @@
     }
   }
 
-  ///////////////////////////////////////////////
-  // Tables
-  //////////////////////////////////////////////
-  table{
-      &.table-bordered{
-          border: 1px solid $light-border-color;
 
-          tr{
-              border-bottom: 1px solid $light-border-color;
-          }
+    ///////////////////////////////////////////////
+    // Tables
+    //////////////////////////////////////////////
+    table{
+      tr{
+          border-bottom: 1px solid $light-border-color;
       }
-  }
+
+      &.table-bordered{
+        border: 1px solid $light-border-color;
+      }
+    }
 }

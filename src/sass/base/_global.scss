@@ -261,3 +261,9 @@ dl {
   -webkit-animation: spin-reverse 2s infinite linear;
   animation: spin-reverse 2s infinite linear;
 }
+
+.tabs-centered{
+  .mat-tab-labels{
+    justify-content: center;
+  }
+}

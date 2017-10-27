@@ -106,6 +106,12 @@
       <mat-card class="col chart first-chart">
         <mat-card-title>Horizontal Bar Example</mat-card-title>
         <mat-card-content>
+
+          <mat-tab-group class="tabs-centered">
+            <mat-tab label="Option 1"></mat-tab>
+            <mat-tab label="Option 2"></mat-tab>
+          </mat-tab-group>
+
           <canvas *ngIf="versionsData" baseChart [data]="versionsData" [colors]="barChartColors" [options]="chartOptions" [labels]="versionsLabels"
             [chartType]="'horizontalBar'"></canvas>
         </mat-card-content>
