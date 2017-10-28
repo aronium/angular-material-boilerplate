@@ -55,7 +55,7 @@ $app-light-warn:        mat-palette($mat-red, A700);
 }
 
 .black-theme{
-    $primary-black:    mat-palette($mat-blue-grey);
+    $primary-black:    mat-palette($mat-blue-grey, 900);
     $accent-black:     mat-palette($mat-blue-grey, 700);
 
     $black-theme:      mat-dark-theme($primary-black, $accent-black);
