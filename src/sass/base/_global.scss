@@ -266,4 +266,10 @@ dl {
   .mat-tab-labels{
     justify-content: center;
   }
+
+  &.no-border{
+    .mat-tab-header{
+      margin: 0 auto;
+    }  
+  }
 }
