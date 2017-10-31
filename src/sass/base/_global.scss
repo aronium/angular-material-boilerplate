@@ -302,6 +302,18 @@ dl {
 
     .mat-icon{
       &::after{
+        content: 'error_outline';
+      }
+    }
+  }
+
+  &.alert-warning{
+    background-color: #f6c342;
+    border-color: #f6c342;
+    color: #B71C1C;
+
+    .mat-icon{
+      &::after{
         content: 'warning';
       }
     }
@@ -328,6 +340,79 @@ dl {
       &::after{
         content: 'done';
       }
+    }
+  }
+}
+
+
+.callout {
+  border-top: 1px solid #3572b0;
+  border-right: 1px solid #3572b0;
+  border-bottom: 1px solid #3572b0;
+  border-left: 1px solid #3572b0;
+  border-radius: 3px;
+  color: currentColor;
+  line-height: 20px;
+  margin: 20px 0 20px 0;
+  overflow-wrap: break-word;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  padding-right: 40px;
+  padding-top: 20px;
+  position: relative;
+  word-wrap: break-word;
+  word-break: break-word;
+
+  h4{
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  :before {
+    background-color: #3572b0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+    line-height: 24px;
+    width: 32px;
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+
+    direction: ltr;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    content: 'info';
+    color: #ffffff;
+  }
+
+  &.callout-danger {
+    border-color: #d04437;
+
+    :before {
+      content: 'error_outline';
+      background-color: #d04437;
+    }
+  }
+
+  &.callout-warning {
+    border-color: #f6c342;
+
+    :before {
+      content: 'warning';
+      background-color: #f6c342;
     }
   }
 }
