@@ -11,16 +11,17 @@
     </a>
     <ul>
       <li [ngClass]="{'expanded-parent': ngInit.value}">
+
         <a (click)="ngInit.value = !ngInit.value" ngInit [value]="false" #ngInit="ngInit" mat-list-item href="javascript:void(0)">
-          <mat-icon>account_balance</mat-icon>
-          <span fill>Company</span><mat-icon class="expand-icon" [ngClass]="{'expand':!ngInit.value, 'collapse': ngInit.value}"></mat-icon>
+          <mat-icon>devices</mat-icon>
+          <span fill>Layout</span><mat-icon class="expand-icon" [ngClass]="{'expand':!ngInit.value, 'collapse': ngInit.value}"></mat-icon>
         </a>
         <ul [ngClass]="{'collapsed':!ngInit.value, 'expanded': ngInit.value}">
-          <li><a mat-list-item href="javascript:void(0)"><span>Company menu 1</span></a></li>
-          <li><a mat-list-item href="javascript:void(0)"><span>Company menu 2</span></a></li>
+          <li><a mat-list-item routerLink="/layout/base" routerLinkActive="active"><span>Grid</span></a></li>
+          <li><a mat-list-item routerLink="/layout/alerts" routerLinkActive="active"><span>Alerts</span></a></li>
+          <li><a mat-list-item routerLink="/layout/buttons" routerLinkActive="active"><span>Buttons</span></a></li>
         </ul>
       </li>
     </ul>
-    <a mat-list-item routerLink="/layout" routerLinkActive="active"><mat-icon>devices</mat-icon><span fill>Layout</span></a>
-  </mat-nav-list> 
+  </mat-nav-list>
 </div>

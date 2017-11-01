@@ -1,0 +1,36 @@
+//////////////////////////////////////////////////////////////////////////////
+// Lists
+//////////////////////////////////////////////////////////////////////////////
+
+dl {
+  &.dl-horizontal {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1em;
+
+    dt {
+      @media (min-width: 768px) {
+        float: left;
+        width: 140px;
+        clear: left;
+      }
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    dd {
+      margin-left: 0;
+      margin-bottom: .5rem;
+
+      @media (min-width: 768px) {
+        margin-left: 160px;
+      }
+    }
+  }
+}

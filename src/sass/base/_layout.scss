@@ -1,4 +1,4 @@
-@import '../mixins/flex.scss';
+@import '../utils/flex.scss';
 
 .flex-container{
 
@@ -41,5 +41,59 @@
         margin: 0;
       }
     }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Layout classes
+//////////////////////////////////////////////////////////////////////////////
+
+section {
+  margin-bottom: 20px;
+}
+
+[fill], .fill {
+  flex: 1 1 auto;
+}
+
+[flex] {
+  -ms-flex: 1;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+[layout=column], [layout=row], [layout] {
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+[layout=row] {
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+
+.app-title{
+  margin-left: 10px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+[center], .center{
+  margin: 0 auto;
+}
+
+.fixed-bottom-right {
+  position: fixed !important;
+  @media(min-width:768px){
+    bottom: 24px;
+    right: 32px;
+  }
+  @media(max-width:767px){
+    bottom: 20px;
+    right: 30px;
   }
 }

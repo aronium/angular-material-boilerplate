@@ -33,23 +33,27 @@ import {
 import { ChartsModule } from 'ng2-charts';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
 
+import { HttpService } from './services';
+
+import { NgInitDirective } from './directives/ng-init.directive';
+
+import { NavBarComponent } from './components/shared/navbar/navbar.component';
+import { ToolbarComponent } from './components/shared/toolbar/toolbar.component';
 import { AppComponent } from './components/app/app.component';
+
 import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
-import { NavBarComponent } from './components/shared/navbar/navbar.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserListComponent } from './components/users/list/user-list.component';
-import { ToolbarComponent } from './components/shared/toolbar/toolbar.component';
-
-import { HttpService } from './services';
 import { UserDetailsComponent } from './components/users/details/user-details.component';
+import { CreateEditUserComponent } from './components/users/shared/create-edit-user/create-edit-user.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { NgInitDirective } from './directives/ng-init.directive';
-import { LayoutComponent } from './components/layout/layout.component';
-import { CreateEditUserComponent } from './components/users/shared/create-edit-user/create-edit-user.component';
+import { LayoutComponent } from './components/layout/base/layout.component';
+import { AlertsLayoutComponent } from './components/layout/alerts-layout/alerts-layout.component';
+import { ButtonsLayoutComponent } from './components/layout/buttons-layout/buttons-layout.component';
 
 const appRoutes: Routes = [
   {
@@ -59,13 +63,20 @@ const appRoutes: Routes = [
       children: [
           { path: '', pathMatch: 'full', redirectTo: '/home' },
           { path: 'home', component: HomeComponent },
-          { path: 'users', component: UserListComponent },
+          { path: 'users', component: UserListComponent},
           { path: 'users/new', component: CreateEditUserComponent },
           { path: 'users/edit/:id', component: CreateEditUserComponent },
           { path: 'users/details/:id', component: UserDetailsComponent },
           { path: 'settings', component: SettingsComponent },
           { path: 'profile', component: ProfileComponent },
-          { path: 'layout', component: LayoutComponent }
+          {
+            path: 'layout',
+            children:[
+              { path: 'base', component: LayoutComponent },
+              { path: 'alerts', component: AlertsLayoutComponent },
+              { path: 'buttons', component: ButtonsLayoutComponent }
+            ]
+          }
       ]
   },
   {
@@ -99,7 +110,9 @@ const appRoutes: Routes = [
     ProfileComponent,
     NgInitDirective,
     LayoutComponent,
-    CreateEditUserComponent
+    CreateEditUserComponent,
+    AlertsLayoutComponent,
+    ButtonsLayoutComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
