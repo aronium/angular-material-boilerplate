@@ -3,6 +3,31 @@
 $info-box-height: 90px;
 
 .home{
+
+    .mat-card{
+      .mat-card-title{
+        line-height: 1;
+
+        .widget-title{
+          float: left;
+          margin-bottom: 16px;
+        }
+
+        .widget-actions{
+          float: right;
+          position: relative;
+          margin-top: -10px;
+
+          .mat-button{
+            min-width: auto;
+            font-size: 12px;
+            padding: 0 8px;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+
     .info-card{
 
         background-color: #607d8b !important;

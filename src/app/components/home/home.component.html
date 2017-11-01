@@ -49,13 +49,29 @@
   <section>
     <div class="flex-container">
       <mat-card class="col chart first-chart">
-        <mat-card-title>Line Chart Example</mat-card-title>
+        <mat-card-title>
+          <div class="widget-title">Line Chart Example</div>
+          <div class="widget-actions">
+            <button mat-icon-button [matMenuTriggerFor]="optionsMenu"><mat-icon>more_vert</mat-icon></button>
+
+            <mat-menu #optionsMenu="matMenu">
+              <button mat-menu-item><mat-icon>refresh</mat-icon>&nbsp;Refresh</button>
+            </mat-menu>
+          </div>
+        </mat-card-title>
         <mat-card-content>
           <canvas baseChart [data]="lineChartData" [colors]="lineChartColors" [labels]="lineChartLabels" [options]="chartOptions" [chartType]="'line'"></canvas>
         </mat-card-content>
       </mat-card>
       <mat-card class="col col-x2 chart first-chart">
-        <mat-card-title>Bar Chart Example</mat-card-title>
+        <mat-card-title>
+          <div class="widget-title">Bar Chart Example</div>
+          <div class="widget-actions">
+            <button mat-icon-button><mat-icon>keyboard_arrow_left</mat-icon></button>
+            <button mat-icon-button><mat-icon>keyboard_arrow_right</mat-icon></button>
+            <button mat-button>Today</button>
+          </div>
+        </mat-card-title>
         <mat-card-content>
           <canvas *ngIf="barChartData" baseChart [data]="barChartData" [labels]="barChartLabels" [colors]="barChartColors" [options]="chartOptions"
             [chartType]="'bar'"></canvas>
