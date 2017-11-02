@@ -19,3 +19,8 @@
     transform: rotate(-360deg);
   }
 }
+
+.spin-reverse{
+  -webkit-animation: spin-reverse 2s infinite linear;
+  animation: spin-reverse 2s infinite linear;
+}

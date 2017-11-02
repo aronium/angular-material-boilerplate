@@ -1,10 +1,15 @@
 // Margins css styles
 @import 'utils/_margins';
+@import 'utils/_spinners';
+
 // Themes
 @import 'themes/index';
+
 // Base styles
 @import 'base/index';
+
 // Components
 @import 'components/index';
+
 // Partials / pages
 @import 'partials/index';

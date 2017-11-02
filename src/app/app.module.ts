@@ -54,6 +54,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { LayoutComponent } from './components/layout/base/layout.component';
 import { AlertsLayoutComponent } from './components/layout/alerts-layout/alerts-layout.component';
 import { ButtonsLayoutComponent } from './components/layout/buttons-layout/buttons-layout.component';
+import { TypographyComponent } from './components/layout/typography/typography.component';
 
 const appRoutes: Routes = [
   {
@@ -74,7 +75,8 @@ const appRoutes: Routes = [
             children:[
               { path: 'base', component: LayoutComponent },
               { path: 'alerts', component: AlertsLayoutComponent },
-              { path: 'buttons', component: ButtonsLayoutComponent }
+              { path: 'buttons', component: ButtonsLayoutComponent },
+              { path: 'typography', component: TypographyComponent }
             ]
           }
       ]
@@ -112,7 +114,8 @@ const appRoutes: Routes = [
     LayoutComponent,
     CreateEditUserComponent,
     AlertsLayoutComponent,
-    ButtonsLayoutComponent
+    ButtonsLayoutComponent,
+    TypographyComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
