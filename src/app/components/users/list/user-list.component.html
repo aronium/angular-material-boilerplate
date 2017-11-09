@@ -1,3 +1,5 @@
+<h1 class="title">Users list</h1>
+
 <button mat-raised-button (click)="onRefresh()">
   <mat-icon>cached</mat-icon>
 </button>
@@ -10,10 +12,7 @@
 
 <mat-card class="margin-top-10">
   <mat-card-content>
-    <mat-card-title>User list</mat-card-title>
-
     <mat-progress-bar [color]="accent" mode="indeterminate" *ngIf="!users"></mat-progress-bar>
-
     <div class="table-responsive" *ngIf="users">
       <table>
         <thead>
