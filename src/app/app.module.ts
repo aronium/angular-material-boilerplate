@@ -55,6 +55,7 @@ import { LayoutComponent } from './components/layout/base/layout.component';
 import { AlertsLayoutComponent } from './components/layout/alerts-layout/alerts-layout.component';
 import { ButtonsLayoutComponent } from './components/layout/buttons-layout/buttons-layout.component';
 import { TypographyComponent } from './components/layout/typography/typography.component';
+import { ConfirmDialogComponent } from './components/dialogs/confirm-dialog/confirm-dialog.component';
 
 const appRoutes: Routes = [
   {
@@ -115,7 +116,8 @@ const appRoutes: Routes = [
     CreateEditUserComponent,
     AlertsLayoutComponent,
     ButtonsLayoutComponent,
-    TypographyComponent
+    TypographyComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -153,6 +155,6 @@ const appRoutes: Routes = [
     HttpService
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ExampleDialogComponent]
+  entryComponents: [ExampleDialogComponent, ConfirmDialogComponent]
 })
 export class AppModule { }

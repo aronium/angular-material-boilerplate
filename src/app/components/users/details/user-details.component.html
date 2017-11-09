@@ -4,7 +4,7 @@
 <button mat-raised-button routerLink="/users/edit/{{user?.id}}">
   <mat-icon aria-label="Edit">edit</mat-icon>
 </button>
-<button mat-raised-button color="warn">
+<button mat-raised-button color="warn" (click)="onDelete()">
   <mat-icon aria-label="Delete">delete</mat-icon>
 </button>
 
