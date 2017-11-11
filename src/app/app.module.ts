@@ -64,20 +64,20 @@ const appRoutes: Routes = [
       // canActivate: [AuthGuard],
       children: [
           { path: '', pathMatch: 'full', redirectTo: '/home' },
-          { path: 'home', component: HomeComponent },
-          { path: 'users', component: UserListComponent},
-          { path: 'users/new', component: CreateEditUserComponent },
-          { path: 'users/edit/:id', component: CreateEditUserComponent },
-          { path: 'users/details/:id', component: UserDetailsComponent },
-          { path: 'settings', component: SettingsComponent },
-          { path: 'profile', component: ProfileComponent },
+          { path: 'home', component: HomeComponent, data: {title: 'Dashboard'} },
+          { path: 'users', component: UserListComponent, data: {title: 'Users'}},
+          { path: 'users/new', component: CreateEditUserComponent, data: {title: 'New user'} },
+          { path: 'users/edit/:id', component: CreateEditUserComponent, data: {title: 'Edit user'} },
+          { path: 'users/details/:id', component: UserDetailsComponent, data: {title: 'User details'} },
+          { path: 'settings', component: SettingsComponent, data: {title: 'Settings'} },
+          { path: 'profile', component: ProfileComponent, data: {title: 'Profile'} },
           {
             path: 'layout',
             children:[
-              { path: 'base', component: LayoutComponent },
-              { path: 'alerts', component: AlertsLayoutComponent },
-              { path: 'buttons', component: ButtonsLayoutComponent },
-              { path: 'typography', component: TypographyComponent }
+              { path: 'base', component: LayoutComponent, data: {title: 'Base layout'} },
+              { path: 'alerts', component: AlertsLayoutComponent, data: {title: 'Alerts'} },
+              { path: 'buttons', component: ButtonsLayoutComponent, data: {title: 'Buttons'} },
+              { path: 'typography', component: TypographyComponent, data: {title: 'Typography'} }
             ]
           }
       ]
