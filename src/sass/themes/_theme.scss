@@ -20,7 +20,6 @@ $background:            map-get($theme, background);
 $accent-color:          mat-color($accent);
 $accent-color-dark:     mat-color($accent, 800);
 $primary-color:         mat-color($primary);
-$border-color:          mat-color($background, card);
 
 $app-light-warn:        mat-palette($mat-red, A700);
 

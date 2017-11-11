@@ -60,8 +60,10 @@ export class ToolbarComponent implements OnInit {
     // Set header, fallback to default title if data not set on route
     let title = snapshot.data['title'] || parentRouteTitle;
 
+    // If any custom title is set, use it
     this.header = title || this.defaultTitle;
 
+    // Set document title
     this.titleService.setTitle(title ? `${this.defaultTitle} - ${title}` : this.defaultTitle)
   }
 

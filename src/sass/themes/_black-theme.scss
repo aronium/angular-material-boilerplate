@@ -10,7 +10,7 @@
 
     .mat-toolbar {
       background: #222222 !important;
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid #2f3030;
     }
 
     .mat-sidenav-content {
@@ -25,7 +25,7 @@
     
     .mat-sidenav {
       background: #222222 !important;
-      border-right: 1px solid $border-color;
+      border-right: 1px solid #2f3030;
 
       .sidenav {
         a {
@@ -40,6 +40,19 @@
           }
         }
       }
+    }
+  }
+  
+  ///////////////////////////////////////////////
+  // Tables
+  //////////////////////////////////////////////
+  .table{
+    tr{
+        border-bottom: 1px solid #262827;
+    }
+
+    &.table-bordered{
+      border: 1px solid #262827;
     }
   }
 }
