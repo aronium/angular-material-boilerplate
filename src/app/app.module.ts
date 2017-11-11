@@ -41,7 +41,6 @@ import { NavBarComponent } from './components/shared/navbar/navbar.component';
 import { ToolbarComponent } from './components/shared/toolbar/toolbar.component';
 import { AppComponent } from './components/app/app.component';
 
-import { ExampleDialogComponent } from './dialogs/example-dialog/example-dialog.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { LoginLayoutComponent } from './layouts/login-layout/login-layout.component';
@@ -72,10 +71,10 @@ const appRoutes: Routes = [
           { path: 'settings', component: SettingsComponent, data: {title: 'Settings'} },
           { path: 'profile', component: ProfileComponent, data: {title: 'Profile'} },
           {
-            path: 'layout',
+            path: 'layout', data: {title: 'Layout'},
             children:[
               { path: 'base', component: LayoutComponent, data: {title: 'Base layout'} },
-              { path: 'alerts', component: AlertsLayoutComponent, data: {title: 'Alerts'} },
+              { path: 'alerts', component: AlertsLayoutComponent, data: {title: 'Alerts & Callouts'} },
               { path: 'buttons', component: ButtonsLayoutComponent, data: {title: 'Buttons'} },
               { path: 'typography', component: TypographyComponent, data: {title: 'Typography'} }
             ]
@@ -99,7 +98,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ExampleDialogComponent,
     HomeComponent,
     MainLayoutComponent,
     NavBarComponent,
@@ -155,6 +153,6 @@ const appRoutes: Routes = [
     HttpService
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ExampleDialogComponent, ConfirmDialogComponent]
+  entryComponents: [ConfirmDialogComponent]
 })
 export class AppModule { }

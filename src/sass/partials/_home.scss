@@ -7,6 +7,13 @@ $widget-action-button-size: 22px;
 .home{
 
     .mat-card{
+
+        &.chart{
+            .mat-card-title{
+                margin-bottom: 0 !important;
+            }
+        }
+
       .mat-card-title{
         .widget-header{
             @include flexbox();

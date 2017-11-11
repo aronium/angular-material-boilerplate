@@ -1,5 +1,3 @@
-<h1 class="title">{{ editMode == 0 ? 'Add new user' : 'Edit user details' }}</h1>
-
 <section *ngIf="user">
   <mat-form-field>
     <input matInput placeholder="Name" autofocus [(ngModel)]="user.name">

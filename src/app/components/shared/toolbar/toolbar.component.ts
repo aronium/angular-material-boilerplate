@@ -9,8 +9,8 @@ import { forEach } from '@angular/router/src/utils/collection';
 export class ToolbarComponent implements OnInit {
 
   private sub: any;
-  private defaultTitle:string;
-  
+  private defaultTitle: string;
+
   @Input()
   header: string;
 
@@ -41,17 +41,21 @@ export class ToolbarComponent implements OnInit {
   }
 
   private getPageTitle(): void {
-    var snapshot = this.route.snapshot;
-    var activated = this.route.firstChild;
-    if(activated != null) {
+    let parentRouteTitle;
+    let snapshot = this.route.snapshot;
+    let activated = this.route.firstChild;
+    if (activated != null) {
       while (activated != null) {
+        // Get title for the current route, if case child is missing rote data, use parent title.
+        parentRouteTitle = snapshot.data['title'] || parentRouteTitle;
+
         snapshot = activated.snapshot;
         activated = activated.firstChild;
       }
     }
-    
+
     // Set header, fallback to default title if data not set on route
-    this.header = snapshot.data['title'] || this.defaultTitle;
+    this.header = snapshot.data['title'] || parentRouteTitle || this.defaultTitle;
   }
 
   ngOnDestroy() {
