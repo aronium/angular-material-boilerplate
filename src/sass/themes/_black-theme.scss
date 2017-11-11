@@ -1,5 +1,7 @@
 @import '../themes/_theme.scss';
 
+$toolbar-border-color: #424242;
+
 .black-theme {
   &.theme-indicator {
     color: #111111 !important;
@@ -10,10 +12,22 @@
 
     .mat-toolbar {
       background: #222222 !important;
-      border-bottom: 1px solid #2f3030;
+      border-bottom: 1px solid $toolbar-border-color;
     }
 
     .mat-sidenav-content {
+
+      a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.2s;
+      
+        &:hover {
+          color: #dadada;
+          text-decoration: none;
+        }
+      }
+
       .mat-card {
         background: #313131 !important;
 
@@ -25,7 +39,7 @@
     
     .mat-sidenav {
       background: #222222 !important;
-      border-right: 1px solid #2f3030;
+      border-right: 1px solid $toolbar-border-color;
 
       .sidenav {
         a {

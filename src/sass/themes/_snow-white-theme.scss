@@ -37,6 +37,7 @@ $foreground: #444444;
 
     .mat-sidenav{
       border-right: 1px solid $light-border-color;
+      background: white!important;
 
       .sidenav {
         a{
@@ -46,7 +47,7 @@ $foreground: #444444;
           &.active:hover,
           &.active:focus,
           &.active:active{
-            background: rgba(0,0,0,0.1)!important;
+            background-color: rgba(0,0,0,0.1)!important;
             color: #111111!important;
           }
         }

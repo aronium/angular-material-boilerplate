@@ -28,11 +28,11 @@
     }
 
     tr{
-        border-bottom: 1px solid #2f3030;
+        border-bottom: 1px solid $light-border-color;
     }
-   
+
     &.table-bordered{
-        border: 1px solid #2f3030;
+      border: 1px solid $light-border-color;
     }
 }
 

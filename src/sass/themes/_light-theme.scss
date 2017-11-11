@@ -6,17 +6,23 @@
   }
 
   .mat-toolbar{
-    background: $accent-color!important;
+    background: #03A9F4!important;
     color: #ffffff!important;
   }
 
   .mat-sidenav{
+
+    background-color: #FFFFFF!important;
+
     .sidenav {
       a{
+        color: currentColor!important;
+
         &.active,
         &.active:hover,
         &.active:focus,
         &.active:active{
+          background-color: #03A9F4!important;
           color: #ffffff!important;
         }
       }

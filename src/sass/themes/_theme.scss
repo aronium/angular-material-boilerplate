@@ -2,12 +2,12 @@
 @include mat-core();
 
 // Define theme defaults
-$app-default:           mat-palette($mat-blue, 700);
-$app-default-accent:    mat-palette($mat-light-blue, 600);
-$app-default-warn:      mat-palette($mat-red);
+$app-default:           mat-palette($mat-blue, 500); 
+$app-default-accent:    mat-palette($mat-blue-grey, 900); 
+$app-default-warn:      mat-palette($mat-red, 800); 
 
 // Build theme
-$theme:                 mat-dark-theme($app-default, $app-default-accent, $app-default-warn);
+$theme:                 mat-light-theme($app-default, $app-default-accent, $app-default-warn);
 
 // Include custom theme
 @include angular-material-theme($theme);
@@ -21,43 +21,52 @@ $accent-color:          mat-color($accent);
 $accent-color-dark:     mat-color($accent, 800);
 $primary-color:         mat-color($primary);
 
-$app-light-warn:        mat-palette($mat-red, A700);
-
 .light-theme{
-    $light-theme:       mat-light-theme($app-default, $app-default-accent, $app-light-warn);
+    $primary-light:     mat-palette($mat-blue);
+    $accent-light:      mat-palette($mat-light-blue);
+    $warn-light:        mat-palette($mat-red);
+
+    $light-theme:       mat-light-theme($primary-light, $accent-light, $warn-light);
 
     @include angular-material-theme($light-theme);
 }
 
 .snow-white-theme{
-    $snow-theme:       mat-light-theme($app-default, $app-default-accent, $app-light-warn);
+    $primary-white:     mat-palette($mat-blue, 700);
+    $accent-white:      mat-palette($mat-light-blue, 600);
+    $warn-white:        mat-palette($mat-red);
+
+    $snow-theme:        mat-light-theme($primary-white, $accent-white, $warn-white);
 
     @include angular-material-theme($snow-theme);
 }
 
 .mixed-theme{
-    $app-mixed-accent: mat-palette($mat-light-blue, 700);
+    $mixed-primary:     mat-palette($mat-blue, 700); 
+    $mixed-accent:      mat-palette($mat-light-blue, 700);
+    $app-light-warn:    mat-palette($mat-red, A700);
 
-    $mixed-theme:      mat-light-theme($app-default, $app-mixed-accent, $app-light-warn);
+    $mixed-theme:       mat-light-theme($mixed-primary, $mixed-accent, $app-light-warn);
 
     @include angular-material-theme($mixed-theme);
 }
 
 .dark-theme{
-    $primary-dark:     mat-palette($mat-blue, 500);
-    $accent-dark:      mat-palette($mat-blue-grey, 900);
-    $warn-dark:        mat-palette($mat-red, 800);
+    $primary-dark:      mat-palette($mat-blue, 700);
+    $accent-dark:       mat-palette($mat-light-blue, 600);
+    $warn-dark:         mat-palette($mat-red);
 
-    $dark-theme:       mat-light-theme($primary-dark, $accent-dark, $warn-dark);
+    $dark-theme:        mat-dark-theme($primary-dark, $accent-dark, $warn-dark);
 
     @include angular-material-theme($dark-theme);
 }
 
 .black-theme{
-    $primary-black:    mat-palette($mat-blue-grey, 500);
-    $accent-black:     mat-palette($mat-blue-grey, 400);
-
-    $black-theme:      mat-dark-theme($primary-black, $accent-black);
+    $primary-black:     mat-palette($mat-blue-grey, 600);
+    $accent-black:      mat-palette($mat-blue-grey, 800);
+    $warn-black:        mat-palette($mat-red, 900);
+    
+    $black-theme:       mat-dark-theme($primary-black, $accent-black, $warn-black);
 
     @include angular-material-theme($black-theme);
 }

@@ -1,41 +1,51 @@
-@import '../base/_variables.scss';
+@import '_theme.scss';
+$table-border-color: #2F3030;
 
-.dark-theme{
-  &.theme-indicator{
-    color: #777777!important;
+.dark-theme {
+  &.theme-indicator {
+    color: #777777 !important;
   }
 
-  .mat-sidenav-container{
-    .mat-sidenav{
-      background: #37474F!important;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s;
+  
+    &:hover {
+      color: #dadada;
+      text-decoration: none;
+    }
+  }
+
+  .mat-sidenav-container {
+    .mat-sidenav {
+      background: #434443 !important;
 
       .sidenav {
-        a{
-          color: #ffffff!important;
 
+        a {
           &.active,
           &.active:hover,
           &.active:focus,
-          &.active:active{
-            background: #263238!important;
-            color: #ffffff!important;
+          &.active:active {
+            background-color: #009CE4!important;
+            color: #ffffff;
           }
         }
       }
     }
   }
-
-
+  
   ///////////////////////////////////////////////
   // Tables
   //////////////////////////////////////////////
-  .table{
-    tr{
-        border-bottom: 1px solid $light-border-color;
+  .table {
+    tr {
+      border-bottom: 1px solid $table-border-color;
     }
 
-    &.table-bordered{
-      border: 1px solid $light-border-color;
+    &.table-bordered {
+      border-bottom: 1px solid $table-border-color;
     }
   }
 }

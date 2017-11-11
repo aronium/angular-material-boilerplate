@@ -17,7 +17,7 @@
     }
 
     .mat-sidenav{
-      background: #0288D1!important;
+      background-color: #0288D1!important;
 
       .sidenav {
         a{
@@ -27,7 +27,7 @@
           &.active:hover,
           &.active:focus,
           &.active:active{
-            background: #0277BD!important;
+            background-color: #0277BD!important;
             color: #ffffff!important;
           }
         }

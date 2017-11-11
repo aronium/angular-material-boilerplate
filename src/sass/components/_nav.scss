@@ -21,73 +21,78 @@ body{
 }
 
 .mat-sidenav-container{
+  .mat-sidenav{
+    background-color: #37474C;
+    
+    .sidenav {
+      width: $sidenav-width !important;
 
-  .sidenav {
-    width: $sidenav-width !important;
-
-    .mat-icon{
-      height: 22px;
-      width: 22px;
-      font-size: 22px;
-    }
-
-    a{
-      font-size: 14px!important;
-
-      span{
-        margin-left: 10px;
+      .mat-icon{
+        height: 22px;
+        width: 22px;
+        font-size: 22px;
       }
 
-      &.active,
-      &.active:hover,
-      &.active:focus,
-      &.active:active{
-        background-color: $accent-color!important;
-      }
-    }
-
-    ul, li{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      .expand-icon{
-        transition: all 500ms ease;
-        height: $expand-icon-size;
-        width: $expand-icon-size;
-        font-size: $expand-icon-size;
-
-        &::after{
-          content: 'add';
+      a{
+        font-size: 14px!important;
+        color: #ffffff;
+        
+        span{
+          margin-left: 10px;
         }
 
-        &.collapse{
-          // Using expand_more icon with rotation
-          // -webkit-transform: rotate(-180deg);
-          // -moz-transform: rotate(-180deg);
-          // transform: rotate(-180deg);
+        &.active,
+        &.active:hover,
+        &.active:focus,
+        &.active:active{
+          background-color: $accent-color;
+          color: #ffffff;
+        }
+      }
+
+      ul, li{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .expand-icon{
+          transition: all 500ms ease;
+          height: $expand-icon-size;
+          width: $expand-icon-size;
+          font-size: $expand-icon-size;
 
           &::after{
-            content: 'remove';
+            content: 'add';
+          }
+
+          &.collapse{
+            // Using expand_more icon with rotation
+            // -webkit-transform: rotate(-180deg);
+            // -moz-transform: rotate(-180deg);
+            // transform: rotate(-180deg);
+
+            &::after{
+              content: 'remove';
+            }
           }
         }
-      }
 
-      ul{
-        text-indent:  22px;
-        
-        &.collapsed{
-          display: none;
+        ul{
+          text-indent:  22px;
           
-          // transition: max-height 0.1s; 
-          // max-height: 0;
-          // overflow: hidden;
-        }
-        &.expanded{
-          display: block;
-          
-          // transition: max-height 0.5s; 
-          // max-height: 100vh;
+          &.collapsed{
+            display: none;
+            
+            // transition: max-height 0.1s; 
+            // max-height: 0;
+            // overflow: hidden;
+          }
+          &.expanded{
+            display: block;
+            
+            // transition: max-height 0.5s; 
+            // max-height: 100vh;
+          }
         }
       }
     }
