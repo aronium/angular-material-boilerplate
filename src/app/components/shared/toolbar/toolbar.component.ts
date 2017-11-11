@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NavigationEnd, Router, ActivatedRoute } from '@angular/router';
 import { forEach } from '@angular/router/src/utils/collection';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-toolbar',
@@ -17,7 +18,9 @@ export class ToolbarComponent implements OnInit {
   @Output()
   toggleMenu = new EventEmitter();
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router,
+    private route: ActivatedRoute,
+    private titleService: Title) { }
 
   /**
   * Dispatch toggleMenu event.
@@ -27,7 +30,7 @@ export class ToolbarComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    // Use default header as the document title or a fallback for toolbar title
     this.defaultTitle = this.header;
 
     // Get initial title on page load
@@ -55,7 +58,11 @@ export class ToolbarComponent implements OnInit {
     }
 
     // Set header, fallback to default title if data not set on route
-    this.header = snapshot.data['title'] || parentRouteTitle || this.defaultTitle;
+    let title = snapshot.data['title'] || parentRouteTitle;
+
+    this.header = title || this.defaultTitle;
+
+    this.titleService.setTitle(title ? `${this.defaultTitle} - ${title}` : this.defaultTitle)
   }
 
   ngOnDestroy() {

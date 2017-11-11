@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -150,7 +150,8 @@ const appRoutes: Routes = [
     RoundProgressModule
   ],
   providers: [
-    HttpService
+    HttpService,
+    Title
   ],
   bootstrap: [AppComponent],
   entryComponents: [ConfirmDialogComponent]
