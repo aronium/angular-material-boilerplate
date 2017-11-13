@@ -17,12 +17,12 @@ h1, h2{
 //////////////////////////////////////////////////////////////////////////////
 
 a {
-  color: $accent-color;
+  color: $primary-color;
   text-decoration: none;
   transition: color 0.2s;
 
   &:hover {
-    color: $accent-color-dark;
+    color: $accent-color;
     text-decoration: none;
   }
 }
