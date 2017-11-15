@@ -8,22 +8,10 @@ $widget-action-button-size: 22px;
 
     .mat-card{
 
-        &.chart{
-            .mat-card-title{
-                margin-bottom: 0 !important;
-            }
-        }
-
       .mat-card-title{
         .widget-header{
             @include flexbox();
             align-items: center;
-            // .mat-icon-button{
-            //     min-height: 1px;
-            //     height: $widget-action-button-size;
-            //     width: $widget-action-button-size;
-            //     line-height: $widget-action-button-size;
-            // }
         }
       }
     }

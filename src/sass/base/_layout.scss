@@ -185,3 +185,25 @@ section {
     right: 30px;
   }
 }
+
+form{
+  &.full-width{
+    width: 100%;
+    .mat-form-field{
+      &.full-width{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.float-right{
+  float: right;
+  &::after{
+    clear: both;
+  }
+}
+
+.clearfix{
+  clear: both;
+}
