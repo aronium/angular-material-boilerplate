@@ -1,93 +1,104 @@
-<button mat-raised-button (click)="onRefresh()">
-  <mat-icon>cached</mat-icon>
-</button>
-<button mat-raised-button routerLink="/users/new">
-  <mat-icon>person_add</mat-icon>
-</button>
-<button mat-raised-button color="warn">
-  <mat-icon>delete</mat-icon>
-</button>
+<div class="user-list-container">
+  <button mat-raised-button (click)="onRefresh()">
+    <mat-icon>cached</mat-icon>
+  </button>
+  <button mat-raised-button routerLink="/users/new">
+    <mat-icon>person_add</mat-icon>
+  </button>
+  <button mat-raised-button color="warn">
+    <mat-icon>delete</mat-icon>
+  </button>
 
-<mat-card class="margin-top-10">
-  <mat-card-content>
-    <form class="full-width">
-      <mat-form-field class="full-width">
-        <input type="text" matInput placeholder="Search" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
-        <mat-icon matSuffix>search</mat-icon>
-      </mat-form-field>
-      <div class="float-right clearfix" *ngIf="!isAdvancedSearchEnabled">
-        <a href="javascript:void(0)" (click)="isAdvancedSearchEnabled = !isAdvancedSearchEnabled">Advanced search</a>
-      </div>
-
-      <div *ngIf="isAdvancedSearchEnabled">
-        <mat-form-field>
-          <input matInput [matDatepicker]="startDatePicker" [(ngModel)]="startDate" [ngModelOptions]="{standalone: true}" placeholder="Start date">
-          <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
-          <mat-datepicker #startDatePicker></mat-datepicker>
+  <mat-card class="margin-top-10">
+    <mat-card-content>
+      <form class="full-width">
+        <mat-form-field class="full-width user-search">
+          <input type="text" matInput placeholder="Search" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+          <mat-icon matSuffix>search</mat-icon>
         </mat-form-field>
-        <mat-form-field>
-          <input matInput [matDatepicker]="endDatePicker" [(ngModel)]="endDate" [ngModelOptions]="{standalone: true}" placeholder="End date">
-          <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
-          <mat-datepicker #endDatePicker></mat-datepicker>
-        </mat-form-field>
-        <div>
+        <div class="float-right margin-bottom-10" *ngIf="!isAdvancedSearchEnabled">
+          <a href="javascript:void(0)" (click)="isAdvancedSearchEnabled = !isAdvancedSearchEnabled">Advanced search</a>
+        </div>
+        <div class="clearfix"></div>
+        
+        <div *ngIf="isAdvancedSearchEnabled">
           <mat-form-field>
-            <mat-select placeholder="State" [(ngModel)]="state" [ngModelOptions]="{standalone: true}">
-              <mat-option>None</mat-option>
-              <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
-            </mat-select>
+            <input matInput [matDatepicker]="startDatePicker" [(ngModel)]="startDate" [ngModelOptions]="{standalone: true}" placeholder="Start date">
+            <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #startDatePicker></mat-datepicker>
           </mat-form-field>
+          <mat-form-field>
+            <input matInput [matDatepicker]="endDatePicker" [(ngModel)]="endDate" [ngModelOptions]="{standalone: true}" placeholder="End date">
+            <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #endDatePicker></mat-datepicker>
+          </mat-form-field>
+          <div>
+            <mat-form-field>
+              <mat-select placeholder="State" [(ngModel)]="state" [ngModelOptions]="{standalone: true}">
+                <mat-option>None</mat-option>
+                <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="margin-bottom-20 clearfix">
+            <button mat-raised-button color="primary">Search</button>
+            <button mat-button (click)="isAdvancedSearchEnabled = !isAdvancedSearchEnabled">Close</button>
+          </div>
         </div>
-        <div class="margin-bottom-20 clearfix">
-          <button mat-raised-button color="primary">Search</button>
-          <button mat-button (click)="isAdvancedSearchEnabled = !isAdvancedSearchEnabled">Close</button>
-        </div>
-      </div>
-    </form>
+      </form>
 
-    <mat-progress-bar [color]="accent" mode="indeterminate" *ngIf="!users"></mat-progress-bar>
-    
-    <div class="table-responsive clearfix" *ngIf="users">
+      <mat-progress-bar [color]="accent" mode="indeterminate" *ngIf="!users"></mat-progress-bar>
 
-      <div>
+      <div class="table-responsive clearfix" *ngIf="users">
+
+        <div>
           <mat-chip-list>
-              <mat-chip *ngIf="email" (remove)="email = null">Search for: {{email}}<mat-icon matChipRemove>cancel</mat-icon></mat-chip>
-              <mat-chip *ngIf="startDate" (remove)="startDate = null">Start date: {{startDate | date: 'dd/MM/yyyy'}}<mat-icon matChipRemove>cancel</mat-icon></mat-chip>
-              <mat-chip *ngIf="endDate" (remove)="endDate = null">End date: {{endDate | date: 'dd/MM/yyyy'}}<mat-icon matChipRemove>cancel</mat-icon></mat-chip>
-              <mat-chip *ngIf="state" (remove)="state = null">State: {{state}}<mat-icon matChipRemove>cancel</mat-icon></mat-chip>
-            </mat-chip-list>
+            <mat-chip *ngIf="email" (remove)="email = null">Search: {{email}}
+              <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+            <mat-chip *ngIf="startDate" (remove)="startDate = null">Start date: {{startDate | date: 'dd/MM/yyyy'}}
+              <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+            <mat-chip *ngIf="endDate" (remove)="endDate = null">End date: {{endDate | date: 'dd/MM/yyyy'}}
+              <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+            <mat-chip *ngIf="state" (remove)="state = null">State: {{state}}
+              <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+          </mat-chip-list>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th width="30">
+                <mat-checkbox (click)="checkAll()"></mat-checkbox>
+              </th>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td width="30">
+                <mat-checkbox [checked]="user.selected"></mat-checkbox>
+              </td>
+              <td>{{user.id}}</td>
+              <td>
+                <a routerLink="/users/details/{{user.id}}">{{user.name}}</a>
+              </td>
+              <td>{{user.username}}</td>
+              <td>{{user.email}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+    </mat-card-content>
+  </mat-card>
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th width="30">
-              <mat-checkbox (click)="checkAll()"></mat-checkbox>
-            </th>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Username</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let user of users">
-            <td width="30">
-              <mat-checkbox [checked]="user.selected"></mat-checkbox>
-            </td>
-            <td>{{user.id}}</td>
-            <td>
-              <a routerLink="/users/details/{{user.id}}">{{user.name}}</a>
-            </td>
-            <td>{{user.username}}</td>
-            <td>{{user.email}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </mat-card-content>
-</mat-card>
-
-<button mat-fab class="fixed-bottom-right" routerLink="/users/new">
-  <mat-icon aria-label="Add user">add</mat-icon>
-</button>
+  <button mat-fab class="fixed-bottom-right" routerLink="/users/new">
+    <mat-icon aria-label="Add user">add</mat-icon>
+  </button>
+</div>
