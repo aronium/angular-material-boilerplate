@@ -1,7 +1,7 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,6 +33,7 @@ import {
 
 import { ChartsModule } from 'ng2-charts';
 import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { NgProgressModule, NgProgressInterceptor } from 'ngx-progressbar';
 
 import { HttpService } from './services';
 
@@ -122,6 +123,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     HttpClientModule,
+    NgProgressModule,
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
@@ -153,7 +155,12 @@ const appRoutes: Routes = [
   ],
   providers: [
     HttpService,
-    Title
+    Title,
+    { 
+      provide: HTTP_INTERCEPTORS, 
+      useClass: NgProgressInterceptor, 
+      multi: true 
+    }
   ],
   bootstrap: [AppComponent],
   entryComponents: [ConfirmDialogComponent]
