@@ -1,6 +1,17 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
 @import '../base/_variables.scss';
 
+$mixed-primary:     mat-palette($mat-blue, 700); 
+$mixed-accent:      mat-palette($mat-light-blue, 700);
+$app-light-warn:    mat-palette($mat-red, A700);
+
 .mixed-theme{
+
+  $mixed-theme:     mat-light-theme($mixed-primary, $mixed-accent, $app-light-warn);
+  @include angular-material-theme($mixed-theme);
+
   &.theme-indicator{
     color: rgb(3, 151, 236)!important;
   }

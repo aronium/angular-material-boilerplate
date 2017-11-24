@@ -1,7 +1,17 @@
-@import '_theme.scss';
+@import '~@angular/material/theming';
+@include mat-core();
+
 $table-border-color: #2F3030;
 
+$primary-dark:      mat-palette($mat-blue, 700);
+$accent-dark:       mat-palette($mat-light-blue, 600);
+$warn-dark:         mat-palette($mat-red);
+
 .dark-theme {
+
+  $dark-theme:      mat-dark-theme($primary-dark, $accent-dark, $warn-dark);
+  @include angular-material-theme($dark-theme);  
+
   &.theme-indicator {
     color: #777777 !important;
   }

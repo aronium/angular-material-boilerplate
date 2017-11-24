@@ -87,6 +87,7 @@ body{
   }
 }
 
+// Force dark backdrop for all themes
 .mat-drawer-backdrop{
     &.mat-drawer-shown {
         background-color: rgba(0, 0, 0, 0.6)!important;
@@ -206,4 +207,16 @@ form{
 
 .clearfix{
   clear: both;
+}
+
+.hide-md{
+  @media(max-width: 767px){
+    display: none!important;
+  }
+}
+
+.hide-lg{
+  @media(min-width: 768px){
+    display: none!important;
+  }
 }

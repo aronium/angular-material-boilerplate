@@ -1,8 +1,18 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
 @import '../base/_variables.scss';
+
+$primary-white:     mat-palette($mat-blue, 700);
+$accent-white:      mat-palette($mat-light-blue, 600);
+$warn-white:        mat-palette($mat-red);
 
 $foreground: #444444;
 
 .snow-white-theme{
+
+  $snow-theme:      mat-light-theme($primary-white, $accent-white, $warn-white);
+  @include angular-material-theme($snow-theme);
 
   &.theme-indicator{
     color: #ffffff!important;

@@ -1,8 +1,17 @@
-@import '../themes/_theme.scss';
+@import '~@angular/material/theming';
+@include mat-core();
 
 $toolbar-border-color: #424242;
 
+$primary-black:     mat-palette($mat-blue-grey, 600);
+$accent-black:      mat-palette($mat-blue-grey, 800);
+$warn-black:        mat-palette($mat-red, 900);
+
 .black-theme {
+
+  $black-theme:     mat-dark-theme($primary-black, $accent-black, $warn-black);
+  @include angular-material-theme($black-theme);
+
   &.theme-indicator {
     color: #111111 !important;
   }

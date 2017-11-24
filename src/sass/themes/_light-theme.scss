@@ -1,6 +1,17 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
 @import '../base/_variables.scss';
 
+$primary-light:     mat-palette($mat-blue);
+$accent-light:      mat-palette($mat-light-blue);
+$warn-light:        mat-palette($mat-red);
+
 .light-theme{
+
+  $light-theme:     mat-light-theme($primary-light, $accent-light, $warn-light);
+  @include angular-material-theme($light-theme);
+  
   &.theme-indicator{
     color: #cccccc!important;
   }
