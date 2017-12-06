@@ -1,6 +1,6 @@
 # Angular Material Boilerplate
 
-Boilerplate Angular 4 project with initial setup for angular application with [Material UI](material.angular.io)
+Boilerplate Angular 4 project with initial setup for angular application with [Material UI](https://material.angular.io/)
 
 ## Demo
 [**VIEW LIVE DEMO**](https://aronium.github.io/angular-material-boilerplate/)
