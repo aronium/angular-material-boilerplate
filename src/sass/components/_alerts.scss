@@ -21,7 +21,7 @@
 
   &.alert-danger{
     background-color: #D32F2F;
-    border-color: #C62828;
+    border-color: #D32F2F;
     color: #ffffff;
 
     .mat-icon{
@@ -45,7 +45,7 @@
 
   &.alert-info{
     background-color: #03A9F4;
-    border-color: #039BE5;
+    border-color: #03A9F4;
     color: #ffffff;
 
     .mat-icon{
@@ -57,7 +57,7 @@
 
   &.alert-success{
     background-color: #4CAF50;
-    border-color: #43A047;
+    border-color: #4CAF50;
     color: #ffffff;
 
     .mat-icon{
@@ -137,6 +137,15 @@
     &:before {
       content: 'warning';
       background-color: #f6c342;
+    }
+  }
+
+  &.callout-success {
+    border-color: #4CAF50;
+
+    &:before {
+      content: 'done_all';
+      background-color: #4CAF50;
     }
   }
 }
