@@ -32,13 +32,20 @@
 
 <section>
   <mat-card>
-    <mat-card-title>Date picker</mat-card-title>
+    <mat-card-title>Fab Buttons</mat-card-title>
     <mat-card-content>
-      <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+      <button mat-fab color="accent">
+        <mat-icon aria-label="Done">done</mat-icon>
+      </button>
+      <button mat-fab color="primary">
+        <mat-icon aria-label="Add">add</mat-icon>
+      </button>
+      <button mat-fab color="warn">
+        <mat-icon aria-label="Close">close</mat-icon>
+      </button>
+      <button mat-fab>
+        <mat-icon aria-label="Remove">remove</mat-icon>
+      </button>
     </mat-card-content>
   </mat-card>
 </section>

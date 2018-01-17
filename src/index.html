@@ -13,58 +13,33 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
 
   <style>
-    @-webkit-keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-      100% {
-        -webkit-transform: rotate(360deg);
+    @keyframes spinner {
+      to {
         transform: rotate(360deg);
       }
     }
 
-    @keyframes spin {
-      0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-      }
-      100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-      }
-    }
-
-    .loading {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      text-align: center;
-      position: fixed;
+    .spinner:before {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-    }
-
-    .spinner{
-      margin: 0 auto 20px auto;
+      width: 60px;
+      height: 60px;
+      margin-top: -30px;
+      margin-left: -30px;
       border-radius: 50%;
-      width: 52px;
-      height: 52px;
-      border: 0.25rem solid #e7e7e7;
-      border-top-color: rgb(17, 126, 199);
-      -webkit-animation: spin 1s infinite linear;
-      animation: spin 1s infinite linear;
+      border: 2px solid #cccccc;
+      border-top-color: #039be5;
+      animation: spinner .6s linear infinite;
     }
   </style>
 </head>
 
 <body class="full-width">
   <app-root>
-    <div class="loading">
-      <div class="spinner"></div>
-      <div>Loading</div>
-    </div>
+    <div class="spinner"></div>
   </app-root>
 </body>
 
