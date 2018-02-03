@@ -23,7 +23,7 @@ $warn-light:        mat-palette($mat-red);
 
   .mat-sidenav{
 
-    background-color: #FFFFFF!important;
+    background-color: #fafafa!important;
 
     .sidenav {
       a{
@@ -33,8 +33,7 @@ $warn-light:        mat-palette($mat-red);
         &.active:hover,
         &.active:focus,
         &.active:active{
-          background-color: #03A9F4!important;
-          color: #ffffff!important;
+          background-color: #c5c5c59f!important;
         }
       }
     }
